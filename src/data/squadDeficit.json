@@ -1,0 +1,46 @@
+{
+  "total_sdi": 75.5,
+  "urgency": "EXTREME_VULNERABILITY",
+  "gap_breakdown": {
+    "GAP_1_INDIAN_FINISHER": {
+      "title": "Indian Lower-Order Clutch Finisher",
+      "weight": 0.3,
+      "gap_deficit_score": 85.0,
+      "weighted_contribution": 25.5,
+      "priority": "Tier 1 (Critical)"
+    },
+    "GAP_2_RHB_MIDDLE_ORDER": {
+      "title": "Right-Handed Top/Middle Order Anchor",
+      "weight": 0.25,
+      "gap_deficit_score": 80.0,
+      "weighted_contribution": 20.0,
+      "priority": "Tier 1 (Critical)"
+    },
+    "GAP_3_INDIAN_DEATH_PACE": {
+      "title": "Indian Death-Over Pace Specialist",
+      "weight": 0.25,
+      "gap_deficit_score": 78.0,
+      "weighted_contribution": 19.5,
+      "priority": "Tier 1 (Critical)"
+    },
+    "GAP_4_PACE_ALLROUNDER": {
+      "title": "High-Impact Pace All-Rounder",
+      "weight": 0.1,
+      "gap_deficit_score": 60.0,
+      "weighted_contribution": 6.0,
+      "priority": "Tier 2 (High Value)"
+    },
+    "GAP_5_SPIN_CONTROL": {
+      "title": "Defensive Spin / Multi-Utility Finger Spin",
+      "weight": 0.1,
+      "gap_deficit_score": 45.0,
+      "weighted_contribution": 4.5,
+      "priority": "Tier 3 (Depth)"
+    }
+  },
+  "primary_bottlenecks": [
+    "GAP_1_INDIAN_FINISHER",
+    "GAP_2_RHB_MIDDLE_ORDER",
+    "GAP_3_INDIAN_DEATH_PACE"
+  ]
+}

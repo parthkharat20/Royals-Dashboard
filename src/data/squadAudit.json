@@ -1,0 +1,39 @@
+{
+  "total_players": 27,
+  "indian_players": 18,
+  "overseas_players": 9,
+  "overseas_quota_compliant": false,
+  "overseas_surplus": 1,
+  "batting_handedness": {
+    "LHB": 9,
+    "RHB": 18,
+    "lhb_pct": 33.3,
+    "top_mid_lhb_pct": 53.8,
+    "full_squad": {
+      "lhb": 9,
+      "rhb": 18,
+      "lhb_pct": 33.3
+    },
+    "batting_core": {
+      "total": 13,
+      "lhb": 7,
+      "rhb": 6,
+      "lhb_pct": 53.8
+    },
+    "projected_top7": {
+      "total": 7,
+      "lhb": 5,
+      "rhb": 2,
+      "lhb_pct": 71.4
+    },
+    "offspin_vulnerability_index": 7.14
+  },
+  "bowling_distribution": {
+    "pace_options": 14,
+    "spin_options": 9,
+    "indian_pace": 7,
+    "overseas_pace": 7,
+    "indian_spin": 8,
+    "overseas_spin": 1
+  }
+}

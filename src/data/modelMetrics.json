@@ -1,0 +1,210 @@
+{
+  "evaluation": {
+    "expected_runs": {
+      "rmse_baseline": 1.8264,
+      "rmse_model": 1.8076,
+      "rmse_reduction_pct": 1.03,
+      "mae_baseline": 1.3712,
+      "mae_model": 1.3735,
+      "r2_score": 0.0164
+    },
+    "batting_expected_runs": {
+      "rmse_phase_baseline": 1.8264,
+      "rmse_ridge_regression": 1.8091,
+      "rmse_hist_gbdt": 1.8076,
+      "rmse_reduction_vs_base_pct": 1.03,
+      "mae_phase_baseline": 1.3712,
+      "mae_ridge_regression": 1.3694,
+      "mae_hist_gbdt": 1.3735,
+      "r2_ridge": 0.0147,
+      "r2_hist_gbdt": 0.0164,
+      "test_deliveries_faced": 31693
+    },
+    "bowling_expected_runs": {
+      "rmse_phase_baseline": 1.8265,
+      "rmse_ridge_regression": 1.8089,
+      "rmse_hist_gbdt": 1.8071,
+      "rmse_reduction_vs_base_pct": 1.06,
+      "mae_phase_baseline": 1.3709,
+      "mae_ridge_regression": 1.3708,
+      "mae_hist_gbdt": 1.3755,
+      "r2_ridge": 0.015,
+      "r2_hist_gbdt": 0.017,
+      "test_legal_deliveries": 31608
+    },
+    "expected_wickets": {
+      "roc_auc": 0.5836,
+      "brier_phase_baseline": 0.05031,
+      "brier_hist_gbdt": 0.0502,
+      "log_loss_phase_baseline": 0.2069,
+      "log_loss_hist_gbdt": 0.2058
+    },
+    "batting_pressure_calibration": [
+      {
+        "press_bin": "0.0-0.2",
+        "n_deliveries": 9080,
+        "mean_actual": 1.5783039647577093,
+        "mean_predicted": 1.4752985633154616,
+        "residual_bias": 0.10300540144224768
+      },
+      {
+        "press_bin": "0.2-0.4",
+        "n_deliveries": 9882,
+        "mean_actual": 1.5027322404371584,
+        "mean_predicted": 1.4114303261695635,
+        "residual_bias": 0.09130191426759482
+      },
+      {
+        "press_bin": "0.4-0.6",
+        "n_deliveries": 8134,
+        "mean_actual": 1.4795918367346939,
+        "mean_predicted": 1.418259591311784,
+        "residual_bias": 0.06133224542290994
+      },
+      {
+        "press_bin": "0.6-0.8",
+        "n_deliveries": 3786,
+        "mean_actual": 1.4474379292128896,
+        "mean_predicted": 1.3741170845995383,
+        "residual_bias": 0.07332084461335131
+      },
+      {
+        "press_bin": "0.8-1.0",
+        "n_deliveries": 811,
+        "mean_actual": 1.2416769420468556,
+        "mean_predicted": 1.3180205112614458,
+        "residual_bias": -0.07634356921459018
+      }
+    ]
+  },
+  "experiments": {
+    "chronological_split": {
+      "train_deliveries_2022_2025": 167879,
+      "test_deliveries_2026": 33082
+    },
+    "evaluation_metrics": {
+      "expected_runs": {
+        "rmse_baseline": 1.8127,
+        "rmse_model": 1.7969,
+        "rmse_reduction_pct": 0.87,
+        "mae_baseline": 1.3479,
+        "mae_model": 1.3545,
+        "r2_score": 0.0136
+      },
+      "expected_wickets": {
+        "roc_auc": 0.5837,
+        "brier_baseline": 0.0506,
+        "brier_model": 0.05041,
+        "log_loss_baseline": 0.2077,
+        "log_loss_model": 0.2062
+      }
+    },
+    "rank_concordance": {
+      "batting": {
+        "spearman_corr": 0.824,
+        "p_value": 3.2776480069577415e-55,
+        "sample_size": 218
+      },
+      "bowling": {
+        "spearman_corr": 0.732,
+        "p_value": 1.32599083007365e-33,
+        "sample_size": 193
+      }
+    },
+    "top_5_batting_raae": [
+      {
+        "striker_id": 1077,
+        "striker_name": "David Miller",
+        "press_balls": 370,
+        "actual_runs": 665,
+        "expected_runs": 538.5,
+        "total_raae": 126.55,
+        "raae_per_100_balls": 34.2
+      },
+      {
+        "striker_id": 7897,
+        "striker_name": "Namboori Tilak Varma",
+        "press_balls": 343,
+        "actual_runs": 628,
+        "expected_runs": 512.5,
+        "total_raae": 115.55,
+        "raae_per_100_balls": 33.69
+      },
+      {
+        "striker_id": 1699,
+        "striker_name": "Suryakumar Yadav",
+        "press_balls": 263,
+        "actual_runs": 495,
+        "expected_runs": 385.3,
+        "total_raae": 109.72,
+        "raae_per_100_balls": 41.72
+      },
+      {
+        "striker_id": 6396,
+        "striker_name": "Tim David",
+        "press_balls": 222,
+        "actual_runs": 437,
+        "expected_runs": 350.0,
+        "total_raae": 87.01,
+        "raae_per_100_balls": 39.19
+      },
+      {
+        "striker_id": 20702,
+        "striker_name": "Tristan Stubbs",
+        "press_balls": 251,
+        "actual_runs": 458,
+        "expected_runs": 372.9,
+        "total_raae": 85.09,
+        "raae_per_100_balls": 33.9
+      }
+    ],
+    "top_5_bowling_rsbe": [
+      {
+        "bowler_id": 2933,
+        "bowler_name": "Jasprit Bumrah",
+        "press_balls": 223,
+        "actual_conceded": 233.0,
+        "expected_conceded": 296.6,
+        "total_rsbe": 63.59,
+        "rsbe_per_100_balls": 28.52
+      },
+      {
+        "bowler_id": 8661,
+        "bowler_name": "Matheesha Pathirana",
+        "press_balls": 252,
+        "actual_conceded": 300.0,
+        "expected_conceded": 350.0,
+        "total_rsbe": 49.97,
+        "rsbe_per_100_balls": 19.83
+      },
+      {
+        "bowler_id": 781,
+        "bowler_name": "Sunil Narine",
+        "press_balls": 176,
+        "actual_conceded": 187.0,
+        "expected_conceded": 234.0,
+        "total_rsbe": 46.98,
+        "rsbe_per_100_balls": 26.69
+      },
+      {
+        "bowler_id": 5979,
+        "bowler_name": "Abrar Ahmed",
+        "press_balls": 133,
+        "actual_conceded": 105.0,
+        "expected_conceded": 145.3,
+        "total_rsbe": 40.25,
+        "rsbe_per_100_balls": 30.26
+      },
+      {
+        "bowler_id": 35318,
+        "bowler_name": "Sakib Hussain",
+        "press_balls": 59,
+        "actual_conceded": 57.0,
+        "expected_conceded": 90.4,
+        "total_rsbe": 33.4,
+        "rsbe_per_100_balls": 56.62
+      }
+    ],
+    "runtime_seconds": 5.86
+  }
+}

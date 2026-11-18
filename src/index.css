@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0A0E1A;
+  --color-surface: #111827;
+  --color-surface-elevated: #1E2640;
+  --color-surface-interactive: #243052;
+
+  --color-rr-pink: #E83E8C;
+  --color-rr-pink-hover: #D81B60;
+  --color-rr-pink-muted: rgba(232, 62, 140, 0.15);
+  --color-rr-blue: #2563EB;
+  --color-rr-blue-hover: #1D4ED8;
+  --color-rr-gold: #FBBF24;
+
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  --color-success: #059669;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    background-color: #0A0E1A;
+    color: #F8FAFC;
+    font-family: var(--font-body);
+    font-feature-settings: 'kern' 1;
+    overflow-x: hidden;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+@utility text-hero {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+@utility text-display {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+@utility text-heading {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+@utility text-subheading {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+@utility text-body-lg {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@utility text-body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+@utility text-caption {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+@utility text-stat {
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@utility text-stat-sm {
+  font-size: 1.35rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+@utility text-gradient-pink {
+  background: linear-gradient(135deg, #E83E8C 0%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility border-hairline {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 24px rgba(232, 62, 140, 0.15);
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "player": "Ashutosh Sharma",
+    "ipl_balls": 116,
+    "ipl_pri": 83.0,
+    "ipl_rank": 11.0,
+    "no_reg_balls": 116,
+    "no_reg_pri": 83.0,
+    "no_reg_rank": 26.0,
+    "full_balls": 122,
+    "full_pri": 85.8,
+    "full_rank": 17.0
+  },
+  {
+    "player": "David Miller",
+    "ipl_balls": 203,
+    "ipl_pri": 88.2,
+    "ipl_rank": 3.0,
+    "no_reg_balls": 370,
+    "no_reg_pri": 84.1,
+    "no_reg_rank": 23.0,
+    "full_balls": 370,
+    "full_pri": 84.1,
+    "full_rank": 24.0
+  },
+  {
+    "player": "Sikandar Raza (Bat)",
+    "ipl_balls": 34,
+    "ipl_pri": 80.0,
+    "ipl_rank": 19.0,
+    "no_reg_balls": 126,
+    "no_reg_pri": 87.1,
+    "no_reg_rank": 9.0,
+    "full_balls": 126,
+    "full_pri": 87.1,
+    "full_rank": 10.0
+  },
+  {
+    "player": "Sikandar Raza (Bowl)",
+    "ipl_balls": 3,
+    "ipl_pri": null,
+    "ipl_rank": null,
+    "no_reg_balls": 47,
+    "no_reg_pri": 34.5,
+    "no_reg_rank": 160.0,
+    "full_balls": 47,
+    "full_pri": 34.5,
+    "full_rank": 172.0
+  },
+  {
+    "player": "Sakib Hussain",
+    "ipl_balls": 59,
+    "ipl_pri": 83.3,
+    "ipl_rank": 1.0,
+    "no_reg_balls": 59,
+    "no_reg_pri": 83.3,
+    "no_reg_rank": 3.0,
+    "full_balls": 59,
+    "full_pri": 83.3,
+    "full_rank": 3.0
+  },
+  {
+    "player": "Nathan Ellis",
+    "ipl_balls": 62,
+    "ipl_pri": 15.8,
+    "ipl_rank": 109.0,
+    "no_reg_balls": 162,
+    "no_reg_pri": 38.0,
+    "no_reg_rank": 139.0,
+    "full_balls": 162,
+    "full_pri": 38.0,
+    "full_rank": 147.0
+  },
+  {
+    "player": "Tilak Varma",
+    "ipl_balls": 0,
+    "ipl_pri": null,
+    "ipl_rank": null,
+    "no_reg_balls": 0,
+    "no_reg_pri": null,
+    "no_reg_rank": null,
+    "full_balls": 0,
+    "full_pri": null,
+    "full_rank": null
+  },
+  {
+    "player": "Jasprit Bumrah",
+    "ipl_balls": 118,
+    "ipl_pri": 69.5,
+    "ipl_rank": 3.0,
+    "no_reg_balls": 223,
+    "no_reg_pri": 67.1,
+    "no_reg_rank": 15.0,
+    "full_balls": 223,
+    "full_pri": 67.1,
+    "full_rank": 17.0
+  }
+]

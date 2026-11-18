@@ -1,0 +1,436 @@
+{
+  "batters": [
+    {
+      "player_id": 7897,
+      "name": "Namboori Tilak Varma",
+      "category": "Batter",
+      "batting_type": "LHB",
+      "is_overseas": false,
+      "pri_score": 79.3,
+      "match_success_rate": 71.4,
+      "press_balls": 343,
+      "base_strike_rate": 136.65,
+      "press_strike_rate": 183.09,
+      "shrunk_press_strike_rate": 178.92,
+      "shrunk_lift_ratio": 1.309,
+      "squad_fit": {
+        "status": "FILLS_CRITICAL_HOLE",
+        "tag": "Indian Clutch Finisher",
+        "gap_addressed": "GAP_1_INDIAN_FINISHER",
+        "fit_score": 95.0,
+        "tactical_rationale": "Exceptional Indian finisher (Press SR: 178.9, PRI: 79.3). Eliminates reliance on overseas slots."
+      }
+    },
+    {
+      "player_id": 1077,
+      "name": "David Miller",
+      "category": "Batter",
+      "batting_type": "LHB",
+      "is_overseas": true,
+      "pri_score": 77.6,
+      "match_success_rate": 70.4,
+      "press_balls": 370,
+      "base_strike_rate": 136.92,
+      "press_strike_rate": 179.73,
+      "shrunk_press_strike_rate": 176.12,
+      "shrunk_lift_ratio": 1.286,
+      "squad_fit": {
+        "status": "OVERSEAS_HIGH_IMPACT",
+        "tag": "Proven Overseas Match-Winner",
+        "gap_addressed": "Overseas Elite Anchor/Finisher",
+        "fit_score": 82.0,
+        "tactical_rationale": "World-class clutch performer (PRI: 77.6). High impact but utilizes an overseas slot."
+      }
+    },
+    {
+      "player_id": 20702,
+      "name": "Tristan Stubbs",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": true,
+      "pri_score": 75.8,
+      "match_success_rate": 76.9,
+      "press_balls": 251,
+      "base_strike_rate": 139.52,
+      "press_strike_rate": 182.47,
+      "shrunk_press_strike_rate": 177.03,
+      "shrunk_lift_ratio": 1.269,
+      "squad_fit": {
+        "status": "HIGH_TACTICAL_FIT",
+        "tag": "Right-Handed Middle Order",
+        "gap_addressed": "GAP_2_RHB_MIDDLE_ORDER",
+        "fit_score": 88.0,
+        "tactical_rationale": "Elite right-handed clutch batter (PRI: 75.8). Corrects the extreme left-handed top order bias."
+      }
+    },
+    {
+      "player_id": 8101,
+      "name": "Ashutosh Sharma",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": false,
+      "pri_score": 72.5,
+      "match_success_rate": 76.9,
+      "press_balls": 122,
+      "base_strike_rate": 145.09,
+      "press_strike_rate": 206.56,
+      "shrunk_press_strike_rate": 191.28,
+      "shrunk_lift_ratio": 1.318,
+      "squad_fit": {
+        "status": "FILLS_CRITICAL_HOLE",
+        "tag": "Indian Clutch Finisher",
+        "gap_addressed": "GAP_1_INDIAN_FINISHER",
+        "fit_score": 95.0,
+        "tactical_rationale": "Exceptional Indian finisher (Press SR: 191.3, PRI: 72.5). Eliminates reliance on overseas slots."
+      }
+    },
+    {
+      "player_id": 2984,
+      "name": "Sikandar Raza",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": true,
+      "pri_score": 72.2,
+      "match_success_rate": 88.9,
+      "press_balls": 126,
+      "base_strike_rate": 128.54,
+      "press_strike_rate": 184.13,
+      "shrunk_press_strike_rate": 174.1,
+      "shrunk_lift_ratio": 1.354,
+      "squad_fit": {
+        "status": "HIGH_TACTICAL_FIT",
+        "tag": "Right-Handed Middle Order",
+        "gap_addressed": "GAP_2_RHB_MIDDLE_ORDER",
+        "fit_score": 88.0,
+        "tactical_rationale": "Elite right-handed clutch batter (PRI: 72.2). Corrects the extreme left-handed top order bias."
+      }
+    },
+    {
+      "player_id": 7260,
+      "name": "Dhruv Jurel",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": false,
+      "pri_score": 71.6,
+      "match_success_rate": 80.0,
+      "press_balls": 122,
+      "base_strike_rate": 143.34,
+      "press_strike_rate": 195.08,
+      "shrunk_press_strike_rate": 182.36,
+      "shrunk_lift_ratio": 1.272,
+      "squad_fit": {
+        "status": "ALREADY_IN_SQUAD",
+        "tag": "Retain / Core Asset",
+        "gap_addressed": "Internal Retention Core",
+        "fit_score": 90.0,
+        "tactical_rationale": "Dhruv Jurel is an existing confirmed RR squad member. Ranking validates retention."
+      }
+    },
+    {
+      "player_id": 4708,
+      "name": "Rinku Singh",
+      "category": "Batter",
+      "batting_type": "LHB",
+      "is_overseas": false,
+      "pri_score": 67.9,
+      "match_success_rate": 68.8,
+      "press_balls": 190,
+      "base_strike_rate": 147.35,
+      "press_strike_rate": 182.11,
+      "shrunk_press_strike_rate": 175.25,
+      "shrunk_lift_ratio": 1.189,
+      "squad_fit": {
+        "status": "DOMESTIC_DEPTH",
+        "tag": "Domestic Strategic Asset",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 70.0,
+        "tactical_rationale": "Solid domestic performer under pressure (PRI: 67.9)."
+      }
+    },
+    {
+      "player_id": 1699,
+      "name": "Suryakumar Yadav",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": false,
+      "pri_score": 67.0,
+      "match_success_rate": 62.5,
+      "press_balls": 263,
+      "base_strike_rate": 163.98,
+      "press_strike_rate": 188.21,
+      "shrunk_press_strike_rate": 182.31,
+      "shrunk_lift_ratio": 1.112,
+      "squad_fit": {
+        "status": "DOMESTIC_DEPTH",
+        "tag": "Domestic Strategic Asset",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 70.0,
+        "tactical_rationale": "Solid domestic performer under pressure (PRI: 67.0)."
+      }
+    },
+    {
+      "player_id": 2436,
+      "name": "Dasun Shanaka",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": true,
+      "pri_score": 66.9,
+      "match_success_rate": 76.5,
+      "press_balls": 170,
+      "base_strike_rate": 131.13,
+      "press_strike_rate": 169.41,
+      "shrunk_press_strike_rate": 164.05,
+      "shrunk_lift_ratio": 1.251,
+      "squad_fit": {
+        "status": "ALREADY_IN_SQUAD",
+        "tag": "Retain / Core Asset",
+        "gap_addressed": "Internal Retention Core",
+        "fit_score": 90.0,
+        "tactical_rationale": "Dasun Shanaka is an existing confirmed RR squad member. Ranking validates retention."
+      }
+    },
+    {
+      "player_id": 4773,
+      "name": "Jaker Ali Anik",
+      "category": "Batter",
+      "batting_type": "RHB",
+      "is_overseas": true,
+      "pri_score": 66.6,
+      "match_success_rate": 85.7,
+      "press_balls": 102,
+      "base_strike_rate": 119.27,
+      "press_strike_rate": 173.53,
+      "shrunk_press_strike_rate": 164.45,
+      "shrunk_lift_ratio": 1.379,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 66.6), but may encounter auction purse and slot constraints."
+      }
+    }
+  ],
+  "bowlers": [
+    {
+      "player_id": 5979,
+      "name": "Abrar Ahmed",
+      "category": "Bowler",
+      "bowling_type": "Right-arm Leg-Break",
+      "pace_or_spin": "Spin",
+      "is_overseas": true,
+      "pri_score": 72.2,
+      "match_success_rate": 80.0,
+      "press_balls": 133,
+      "base_economy": 7.09,
+      "press_economy": 4.74,
+      "shrunk_press_economy": 5.67,
+      "shrunk_lift_ratio": 1.25,
+      "squad_fit": {
+        "status": "HIGH_TACTICAL_FIT",
+        "tag": "Right-Handed Middle Order",
+        "gap_addressed": "GAP_2_RHB_MIDDLE_ORDER",
+        "fit_score": 88.0,
+        "tactical_rationale": "Elite right-handed clutch batter (PRI: 72.2). Corrects the extreme left-handed top order bias."
+      }
+    },
+    {
+      "player_id": 2490,
+      "name": "Mohammad Nawaz",
+      "category": "Bowler",
+      "bowling_type": "Slow left-arm orthodox",
+      "pace_or_spin": "Spin",
+      "is_overseas": true,
+      "pri_score": 68.7,
+      "match_success_rate": 90.9,
+      "press_balls": 107,
+      "base_economy": 7.36,
+      "press_economy": 5.1,
+      "shrunk_press_economy": 6.11,
+      "shrunk_lift_ratio": 1.205,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 68.7), but may encounter auction purse and slot constraints."
+      }
+    },
+    {
+      "player_id": 2878,
+      "name": "Mohit Sharma",
+      "category": "Bowler",
+      "bowling_type": "Right-arm medium-fast",
+      "pace_or_spin": "Pace",
+      "is_overseas": false,
+      "pri_score": 64.5,
+      "match_success_rate": 92.9,
+      "press_balls": 160,
+      "base_economy": 10.17,
+      "press_economy": 7.84,
+      "shrunk_press_economy": 8.08,
+      "shrunk_lift_ratio": 1.259,
+      "squad_fit": {
+        "status": "FILLS_CRITICAL_HOLE",
+        "tag": "Indian Death Pace Specialist",
+        "gap_addressed": "GAP_3_INDIAN_DEATH_PACE",
+        "fit_score": 92.0,
+        "tactical_rationale": "High-reliability domestic death pacer (Press Econ: 8.08, PRI: 64.5). Provides vital cover."
+      }
+    },
+    {
+      "player_id": 35318,
+      "name": "Sakib Hussain",
+      "category": "Bowler",
+      "bowling_type": "Right-arm medium-fast",
+      "pace_or_spin": "Pace",
+      "is_overseas": false,
+      "pri_score": 63.0,
+      "match_success_rate": 100.0,
+      "press_balls": 59,
+      "base_economy": 10.33,
+      "press_economy": 6.31,
+      "shrunk_press_economy": 7.39,
+      "shrunk_lift_ratio": 1.398,
+      "squad_fit": {
+        "status": "FILLS_CRITICAL_HOLE",
+        "tag": "Indian Death Pace Specialist",
+        "gap_addressed": "GAP_3_INDIAN_DEATH_PACE",
+        "fit_score": 92.0,
+        "tactical_rationale": "High-reliability domestic death pacer (Press Econ: 7.39, PRI: 63.0). Provides vital cover."
+      }
+    },
+    {
+      "player_id": 2933,
+      "name": "Jasprit Bumrah",
+      "category": "Bowler",
+      "bowling_type": "Right-arm medium",
+      "pace_or_spin": "Pace",
+      "is_overseas": false,
+      "pri_score": 62.2,
+      "match_success_rate": 75.0,
+      "press_balls": 223,
+      "base_economy": 7.38,
+      "press_economy": 6.43,
+      "shrunk_press_economy": 6.81,
+      "shrunk_lift_ratio": 1.084,
+      "squad_fit": {
+        "status": "FILLS_CRITICAL_HOLE",
+        "tag": "Indian Death Pace Specialist",
+        "gap_addressed": "GAP_3_INDIAN_DEATH_PACE",
+        "fit_score": 92.0,
+        "tactical_rationale": "High-reliability domestic death pacer (Press Econ: 6.81, PRI: 62.2). Provides vital cover."
+      }
+    },
+    {
+      "player_id": 2382,
+      "name": "Jamie Overton",
+      "category": "Bowler",
+      "bowling_type": "Right-arm Fast",
+      "pace_or_spin": "Pace",
+      "is_overseas": true,
+      "pri_score": 61.3,
+      "match_success_rate": 85.7,
+      "press_balls": 86,
+      "base_economy": 9.07,
+      "press_economy": 6.56,
+      "shrunk_press_economy": 7.32,
+      "shrunk_lift_ratio": 1.239,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 61.3), but may encounter auction purse and slot constraints."
+      }
+    },
+    {
+      "player_id": 4692,
+      "name": "Lockie Ferguson",
+      "category": "Bowler",
+      "bowling_type": "Right-arm Fast",
+      "pace_or_spin": "Pace",
+      "is_overseas": true,
+      "pri_score": 60.4,
+      "match_success_rate": 80.0,
+      "press_balls": 198,
+      "base_economy": 9.11,
+      "press_economy": 7.58,
+      "shrunk_press_economy": 7.82,
+      "shrunk_lift_ratio": 1.165,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 60.4), but may encounter auction purse and slot constraints."
+      }
+    },
+    {
+      "player_id": 3272,
+      "name": "Fabian Allen",
+      "category": "Bowler",
+      "bowling_type": "Slow left-arm orthodox",
+      "pace_or_spin": "Spin",
+      "is_overseas": true,
+      "pri_score": 60.1,
+      "match_success_rate": 100.0,
+      "press_balls": 36,
+      "base_economy": 10.03,
+      "press_economy": 5.33,
+      "shrunk_press_economy": 7.24,
+      "shrunk_lift_ratio": 1.385,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 60.1), but may encounter auction purse and slot constraints."
+      }
+    },
+    {
+      "player_id": 5939,
+      "name": "Cameron Green",
+      "category": "Bowler",
+      "bowling_type": "Right-arm medium",
+      "pace_or_spin": "Pace",
+      "is_overseas": true,
+      "pri_score": 59.0,
+      "match_success_rate": 75.0,
+      "press_balls": 109,
+      "base_economy": 9.86,
+      "press_economy": 7.48,
+      "shrunk_press_economy": 7.9,
+      "shrunk_lift_ratio": 1.248,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 59.0), but may encounter auction purse and slot constraints."
+      }
+    },
+    {
+      "player_id": 4926,
+      "name": "Shadab Khan",
+      "category": "Bowler",
+      "bowling_type": "Right-arm Leg-Break",
+      "pace_or_spin": "Spin",
+      "is_overseas": true,
+      "pri_score": 57.3,
+      "match_success_rate": 75.0,
+      "press_balls": 131,
+      "base_economy": 8.12,
+      "press_economy": 6.78,
+      "shrunk_press_economy": 7.29,
+      "shrunk_lift_ratio": 1.114,
+      "squad_fit": {
+        "status": "OVERSEAS_DEPTH",
+        "tag": "Overseas Rotational Option",
+        "gap_addressed": "Squad Depth",
+        "fit_score": 65.0,
+        "tactical_rationale": "Decent overseas option (PRI: 57.3), but may encounter auction purse and slot constraints."
+      }
+    }
+  ]
+}

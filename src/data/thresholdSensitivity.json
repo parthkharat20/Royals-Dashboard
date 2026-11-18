@@ -1,0 +1,328 @@
+{
+  "batting_sensitivity": [
+    {
+      "threshold": 0.5,
+      "pressure_deliveries_faced": 40797,
+      "qualified_batters": 277,
+      "top_10_names": [
+        "Mark Chapman",
+        "Shubman Gill",
+        "Ashutosh Sharma",
+        "Shubham Dubey",
+        "Mohammad Nabi",
+        "Sikandar Raza",
+        "Babar Azam",
+        "Shreyas Iyer",
+        "Namboori Tilak Varma",
+        "Jaker Ali Anik"
+      ],
+      "top_10_ids": [
+        3374,
+        6288,
+        8101,
+        25139,
+        1107,
+        2984,
+        2485,
+        3647,
+        7897,
+        4773
+      ]
+    },
+    {
+      "threshold": 0.55,
+      "pressure_deliveries_faced": 29903,
+      "qualified_batters": 263,
+      "top_10_names": [
+        "Dhruv Jurel",
+        "Ashutosh Sharma",
+        "Namboori Tilak Varma",
+        "Nitish Rana",
+        "Suryakumar Yadav",
+        "Tim David",
+        "Shreyas Iyer",
+        "David Miller",
+        "Sikandar Raza",
+        "Tristan Stubbs"
+      ],
+      "top_10_ids": [
+        7260,
+        8101,
+        7897,
+        4246,
+        1699,
+        6396,
+        3647,
+        1077,
+        2984,
+        20702
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "pressure_deliveries_faced": 22642,
+      "qualified_batters": 241,
+      "top_10_names": [
+        "Namboori Tilak Varma",
+        "David Miller",
+        "Tristan Stubbs",
+        "Ashutosh Sharma",
+        "Sikandar Raza",
+        "Dhruv Jurel",
+        "Rinku Singh",
+        "Suryakumar Yadav",
+        "Dasun Shanaka",
+        "Jaker Ali Anik"
+      ],
+      "top_10_ids": [
+        7897,
+        1077,
+        20702,
+        8101,
+        2984,
+        7260,
+        4708,
+        1699,
+        2436,
+        4773
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "pressure_deliveries_faced": 17001,
+      "qualified_batters": 216,
+      "top_10_names": [
+        "Namboori Tilak Varma",
+        "David Miller",
+        "Tristan Stubbs",
+        "Moeen Ali",
+        "Sherfane Rutherford",
+        "Dasun Shanaka",
+        "Jaker Ali Anik",
+        "Rinku Singh",
+        "Dhruv Jurel",
+        "Tim David"
+      ],
+      "top_10_ids": [
+        7897,
+        1077,
+        20702,
+        1596,
+        6725,
+        2436,
+        4773,
+        4708,
+        7260,
+        6396
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "pressure_deliveries_faced": 12384,
+      "qualified_batters": 174,
+      "top_10_names": [
+        "Namboori Tilak Varma",
+        "David Miller",
+        "Tristan Stubbs",
+        "Rinku Singh",
+        "Dasun Shanaka",
+        "Tim David",
+        "Ashutosh Sharma",
+        "Ravindra Jadeja",
+        "Dhruv Jurel",
+        "Jaker Ali Anik"
+      ],
+      "top_10_ids": [
+        7897,
+        1077,
+        20702,
+        4708,
+        2436,
+        6396,
+        8101,
+        152,
+        7260,
+        4773
+      ]
+    }
+  ],
+  "bowling_sensitivity": [
+    {
+      "threshold": 0.5,
+      "pressure_legal_deliveries": 40662,
+      "qualified_bowlers": 299,
+      "top_10_names": [
+        "Abrar Ahmed",
+        "Jamie Overton",
+        "Mohammad Nawaz",
+        "Sufiyan Muqeem",
+        "Sakib Hussain",
+        "Lockie Ferguson",
+        "Sunil Narine",
+        "Kyle Jamieson",
+        "Fabian Allen",
+        "Mohit Sharma"
+      ],
+      "top_10_ids": [
+        5979,
+        2382,
+        2490,
+        34485,
+        35318,
+        4692,
+        781,
+        3697,
+        3272,
+        2878
+      ]
+    },
+    {
+      "threshold": 0.55,
+      "pressure_legal_deliveries": 29798,
+      "qualified_bowlers": 269,
+      "top_10_names": [
+        "Abrar Ahmed",
+        "Mohammad Nawaz",
+        "Lockie Ferguson",
+        "Jamie Overton",
+        "Sakib Hussain",
+        "Jofra Archer",
+        "Sunil Narine",
+        "Shadab Khan",
+        "Cameron Green",
+        "Jasprit Bumrah"
+      ],
+      "top_10_ids": [
+        5979,
+        2490,
+        4692,
+        2382,
+        35318,
+        3298,
+        781,
+        4926,
+        5939,
+        2933
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "pressure_legal_deliveries": 22559,
+      "qualified_bowlers": 224,
+      "top_10_names": [
+        "Abrar Ahmed",
+        "Mohammad Nawaz",
+        "Mohit Sharma",
+        "Sakib Hussain",
+        "Jasprit Bumrah",
+        "Jamie Overton",
+        "Lockie Ferguson",
+        "Fabian Allen",
+        "Cameron Green",
+        "Shadab Khan"
+      ],
+      "top_10_ids": [
+        5979,
+        2490,
+        2878,
+        35318,
+        2933,
+        2382,
+        4692,
+        3272,
+        5939,
+        4926
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "pressure_legal_deliveries": 16929,
+      "qualified_bowlers": 189,
+      "top_10_names": [
+        "Shadab Khan",
+        "Mohammad Nawaz",
+        "Abrar Ahmed",
+        "Sakib Hussain",
+        "Cameron Green",
+        "Junaid Siddique",
+        "Jasprit Bumrah",
+        "Mohit Sharma",
+        "Kyle Jamieson",
+        "Fabian Allen"
+      ],
+      "top_10_ids": [
+        4926,
+        2490,
+        5979,
+        35318,
+        5939,
+        8009,
+        2933,
+        2878,
+        3697,
+        3272
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "pressure_legal_deliveries": 12336,
+      "qualified_bowlers": 162,
+      "top_10_names": [
+        "Shadab Khan",
+        "Sakib Hussain",
+        "Abrar Ahmed",
+        "Lockie Ferguson",
+        "Mohammad Nawaz",
+        "Junaid Siddique",
+        "Shaheen Afridi",
+        "Kuldeep Yadav",
+        "Arshdeep Singh",
+        "Karn Sharma"
+      ],
+      "top_10_ids": [
+        4926,
+        35318,
+        5979,
+        4692,
+        2490,
+        8009,
+        6355,
+        3644,
+        6464,
+        395
+      ]
+    }
+  ],
+  "rank_correlations": {
+    "batting": {
+      "0.5": 0.6971,
+      "0.55": 0.8667,
+      "0.6": 1.0,
+      "0.65": 0.876,
+      "0.7": 0.7589
+    },
+    "bowling": {
+      "0.5": 0.8152,
+      "0.55": 0.9034,
+      "0.6": 1.0,
+      "0.65": 0.8927,
+      "0.7": 0.7636
+    }
+  },
+  "jaccard_similarity": {
+    "batting": {
+      "0.5": 0.25,
+      "0.55": 0.5385,
+      "0.6": 1.0,
+      "0.65": 0.5385,
+      "0.7": 0.6667
+    },
+    "bowling": {
+      "0.5": 0.5385,
+      "0.55": 0.6667,
+      "0.6": 1.0,
+      "0.65": 0.6667,
+      "0.7": 0.3333
+    }
+  }
+}

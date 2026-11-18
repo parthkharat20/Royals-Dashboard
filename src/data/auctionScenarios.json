@@ -1,0 +1,2091 @@
+{
+  "1": {
+    "scenario_id": 1,
+    "title": "Domestic Finisher First (Ashutosh Anchor)",
+    "strategy_summary": "Prioritizes acquiring Ashutosh Sharma (Priority #1 target) to resolve the lower-order finishing void with a domestic RHB. Frees overseas slots for bowling and all-rounders while grooming express pacer Sakib Hussain.",
+    "primary_focus": "GAP_1_INDIAN_FINISHER",
+    "target_acquisitions": [
+      {
+        "name": "Ashutosh Sharma",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 85.2,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 92.82,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Contracted to DC for IPL 2026 (INR 3.80 Cr). 2027 retention status pending. Dated franchise reporting indicates DC trade window is currently closed for Ashutosh. Rajasthan Royals' Priority #1 target via trade window reopening or aggressive bidding if released. Estimated fair value ₹4.0–5.0 Cr; walk-away auction bidding ceiling ₹5.0 Cr in Scenario 1; maximum pre-auction bilateral trade consideration ceiling ₹8.5 Cr (strategic premium to induce DC to trade contracted asset)."
+      },
+      {
+        "name": "Sakib Hussain",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 62.6,
+        "estimated_price_cr": 0.5,
+        "squad_fit_score": 63.81,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Uncapped domestic express fast bowler (Age 21; DOB: 14 Dec 2004; 21y 11m as of Nov 2026). SRH 2026 contract (INR 0.30 Cr); 2027 retention pending. Clocked at 140.0–145.4 km/h peak velocity in BCCI domestic tracking (peak 142.4 km/h in Data Pack [Match 50362 vs MI, Over 6.4]). Priority #2 bowling target (fair value ₹0.30–0.50 Cr; walk-away ceiling ₹1.50 Cr)."
+      },
+      {
+        "name": "Sikandar Raza",
+        "role": "Spin Bowling All-Rounder",
+        "category": "All-Rounder",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 81.6,
+        "estimated_price_cr": 5.0,
+        "squad_fit_score": 78.36,
+        "primary_gap": "GAP_2_RHB_MIDDLE_ORDER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Previously contracted to PBKS; not on 2026 IPL roster. IPL 2027 registration and availability not officially confirmed. Base price bracket ₹1.5–2.0 Cr; fair value ₹1.5–2.0 Cr; Scenario 1 maximum scenario allocation buffer ₹5.0 Cr (allocated buffer to outbid rivals)."
+      }
+    ],
+    "total_estimated_spend_cr": 9.5,
+    "baseline_planning_budget_cr": 20.8,
+    "release_credits_cr": 3.0,
+    "conditional_planning_budget_cr": 23.8,
+    "illustrative_remaining_budget_cr": 14.3,
+    "remaining_purse_cr": 14.3,
+    "overseas_slots_acquired": 1,
+    "average_acquisition_pri": 76.47,
+    "total_pva_acquired": 137.27,
+    "gross_squad_pva": 137.27,
+    "active_starting_xi_pva": 93.67,
+    "net_incremental_matchday_pva": 85.62,
+    "displacement_table": [
+      {
+        "incoming_player": "Ashutosh Sharma",
+        "incoming_pva": 78.87,
+        "incumbent_displaced": "Shubham Dubey",
+        "incumbent_pva_baseline": 17.0,
+        "net_difference": 61.87,
+        "role": "Indian Clutch Finisher (No. 7)",
+        "is_overseas": false
+      },
+      {
+        "incoming_player": "Sakib Hussain",
+        "incoming_pva": 14.8,
+        "incumbent_displaced": "Kuldeep Sen",
+        "incumbent_pva_baseline": -8.95,
+        "net_difference": 23.75,
+        "role": "Indian Death Pacer / Impact Sub",
+        "is_overseas": false
+      },
+      {
+        "incoming_player": "Sikandar Raza",
+        "incoming_pva": 43.6,
+        "incumbent_displaced": "Overseas Tactical Reserve",
+        "incumbent_pva_baseline": 0.0,
+        "net_difference": 0.0,
+        "role": "Tactical Overseas Bench / Spin-Hitting Specialist",
+        "is_overseas": true
+      }
+    ],
+    "pva_bridge": "Selected Acquisition Historical PVA / Active Playing XII Direct PVA: +93.67 runs (Ashutosh +78.87, Sakib +14.80 = +93.67 vs 0.0 replacement baseline). Multi-Incumbent Net Incremental Matchday PVA: +85.62 runs after deducting incumbent baselines (Ashutosh +61.87 over Shubham Dubey [+17.00] and Sakib +23.75 over Kuldeep Sen [-8.95]; 61.87 + 23.75 = 85.62 runs; mixed baseline comparison yields +76.67 runs if Sakib is benchmarked vs 0.0). Sikandar Raza (+43.60) provides elite overseas tactical rotation/depth, yielding Gross Squad PVA of +137.27 runs.",
+    "releases": [
+      {
+        "name": "Adam Milne",
+        "is_overseas": true,
+        "price_cr": 2.4,
+        "reason": "Redundant overseas pace reserve behind Archer/Burger"
+      },
+      {
+        "name": "Aman Rao Perala",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe uncapped domestic depth"
+      },
+      {
+        "name": "Brijesh Sharma",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe uncapped domestic depth"
+      }
+    ],
+    "overseas_released_count": 1,
+    "indian_released_count": 2,
+    "overseas_acquired_count": 1,
+    "indian_acquired_count": 2,
+    "retained_squad_count": 22,
+    "final_squad_size": 25,
+    "final_overseas_count": 8,
+    "feasibility_status": "FULLY FEASIBLE & COMPLIANT",
+    "full_squad_roster": [
+      {
+        "name": "Yashasvi Jaiswal",
+        "player_id": 6819,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 18.0
+      },
+      {
+        "name": "Vaibhav Sooryavanshi",
+        "player_id": 50284,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.1
+      },
+      {
+        "name": "Lhuan Pretorius",
+        "player_id": null,
+        "is_overseas": true,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Dhruv Jurel",
+        "player_id": 7260,
+        "is_overseas": false,
+        "role": "Wicketkeeper / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Riyan Parag",
+        "player_id": 6423,
+        "is_overseas": false,
+        "role": "Middle-Order / All-Rounder",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "player_id": 3297,
+        "is_overseas": true,
+        "role": "Finisher / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 11.0
+      },
+      {
+        "name": "Donovan Ferreira",
+        "player_id": 7708,
+        "is_overseas": true,
+        "role": "Finisher / Wicketkeeper",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.0
+      },
+      {
+        "name": "Shubham Dubey",
+        "player_id": 25139,
+        "is_overseas": false,
+        "role": "Middle-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.8
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "player_id": 152,
+        "is_overseas": false,
+        "role": "All-Rounder / Spin",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Sam Curran",
+        "player_id": 4409,
+        "is_overseas": true,
+        "role": "All-Rounder / Pace",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 2.4
+      },
+      {
+        "name": "Ravi Singh",
+        "player_id": 60700,
+        "is_overseas": false,
+        "role": "Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.95
+      },
+      {
+        "name": "Jofra Archer",
+        "player_id": 3298,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 12.5
+      },
+      {
+        "name": "Nandre Burger",
+        "player_id": 7312,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Kwena Maphaka",
+        "player_id": 26663,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.5
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "player_id": 7503,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 7.2
+      },
+      {
+        "name": "Vignesh Puthur",
+        "player_id": 48557,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Sandeep Sharma",
+        "player_id": 2411,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Tushar Deshpande",
+        "player_id": 6806,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 6.5
+      },
+      {
+        "name": "Kuldeep Sen",
+        "player_id": 7545,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.75
+      },
+      {
+        "name": "Sushant Mishra",
+        "player_id": 7269,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.9
+      },
+      {
+        "name": "Yudhvir Singh",
+        "player_id": 8580,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.35
+      },
+      {
+        "name": "Yash Punja",
+        "player_id": 41503,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Ashutosh Sharma",
+        "player_id": 8101,
+        "is_overseas": false,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Sakib Hussain",
+        "player_id": 35318,
+        "is_overseas": false,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 0.5
+      },
+      {
+        "name": "Sikandar Raza",
+        "player_id": 2984,
+        "is_overseas": true,
+        "role": "Spin Bowling All-Rounder",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 5.0
+      }
+    ],
+    "baseline_sdi": 75.5,
+    "projected_post_auction_sdi": 43.0,
+    "sdi_improvement_pct": 43.0,
+    "tactical_starting_xi": {
+      "slot_5": "Dhruv Jurel (RHB, WK)",
+      "slot_6": "Ashutosh Sharma (RHB, Finisher)",
+      "slot_7": "Ravindra Jadeja (LHB, SLA)",
+      "impact_sub": "Sakib Hussain (Express Domestic Death Pacer) in for Ashutosh Sharma when bowling"
+    }
+  },
+  "2": {
+    "scenario_id": 2,
+    "title": "Domestic Death Bowler First (Sakib Express Anchor)",
+    "strategy_summary": "Locks in high-upside domestic express death execution (Sakib Hussain: 140+ kph, 75.0% consistency under P_bowl) alongside Ashutosh Sharma and domestic batting depth.",
+    "primary_focus": "GAP_3_INDIAN_DEATH_PACE",
+    "target_acquisitions": [
+      {
+        "name": "Ashutosh Sharma",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 85.2,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 92.82,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Contracted to DC for IPL 2026 (INR 3.80 Cr). 2027 retention status pending. Dated franchise reporting indicates DC trade window is currently closed for Ashutosh. Rajasthan Royals' Priority #1 target via trade window reopening or aggressive bidding if released. Estimated fair value ₹4.0–5.0 Cr; walk-away auction bidding ceiling ₹5.0 Cr in Scenario 1; maximum pre-auction bilateral trade consideration ceiling ₹8.5 Cr (strategic premium to induce DC to trade contracted asset)."
+      },
+      {
+        "name": "Sakib Hussain",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 62.6,
+        "estimated_price_cr": 0.5,
+        "squad_fit_score": 63.81,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Uncapped domestic express fast bowler (Age 21; DOB: 14 Dec 2004; 21y 11m as of Nov 2026). SRH 2026 contract (INR 0.30 Cr); 2027 retention pending. Clocked at 140.0–145.4 km/h peak velocity in BCCI domestic tracking (peak 142.4 km/h in Data Pack [Match 50362 vs MI, Over 6.4]). Priority #2 bowling target (fair value ₹0.30–0.50 Cr; walk-away ceiling ₹1.50 Cr)."
+      },
+      {
+        "name": "Nehal Wadhera",
+        "role": "Middle Order Batter",
+        "category": "Batter",
+        "batting_type": "LHB",
+        "is_overseas": false,
+        "pri_score": 64.0,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 61.9,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Dynamic Indian middle-order left-hander, contracted to PBKS for 2026. Actionable via trade window or auction pool if released."
+      },
+      {
+        "name": "Eshan Malinga",
+        "role": "Sling Death Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 59.5,
+        "estimated_price_cr": 1.0,
+        "squad_fit_score": 54.83,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Pathum Eshan Malinga (ID 39657): Sling-action Sri Lankan death specialist with lethal yorker angle. Retained by SRH for 2026; 2027 status pending. Conditional target only."
+      }
+    ],
+    "total_estimated_spend_cr": 9.5,
+    "baseline_planning_budget_cr": 20.8,
+    "release_credits_cr": 3.3,
+    "conditional_planning_budget_cr": 24.1,
+    "illustrative_remaining_budget_cr": 14.6,
+    "remaining_purse_cr": 14.6,
+    "overseas_slots_acquired": 1,
+    "average_acquisition_pri": 67.83,
+    "total_pva_acquired": 123.67,
+    "gross_squad_pva": 123.67,
+    "active_starting_xi_pva": 123.67,
+    "net_incremental_matchday_pva": 123.67,
+    "displacement_table": [],
+    "pva_bridge": "Full squad acquisition PVA: +123.67 runs.",
+    "releases": [
+      {
+        "name": "Adam Milne",
+        "is_overseas": true,
+        "price_cr": 2.4,
+        "reason": "Redundant overseas pace reserve"
+      },
+      {
+        "name": "Aman Rao Perala",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe uncapped domestic depth"
+      },
+      {
+        "name": "Brijesh Sharma",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe uncapped domestic depth"
+      },
+      {
+        "name": "Yash Punja",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe uncapped domestic depth"
+      }
+    ],
+    "overseas_released_count": 1,
+    "indian_released_count": 3,
+    "overseas_acquired_count": 1,
+    "indian_acquired_count": 3,
+    "retained_squad_count": 21,
+    "final_squad_size": 25,
+    "final_overseas_count": 8,
+    "feasibility_status": "FULLY FEASIBLE & COMPLIANT",
+    "full_squad_roster": [
+      {
+        "name": "Yashasvi Jaiswal",
+        "player_id": 6819,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 18.0
+      },
+      {
+        "name": "Vaibhav Sooryavanshi",
+        "player_id": 50284,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.1
+      },
+      {
+        "name": "Lhuan Pretorius",
+        "player_id": null,
+        "is_overseas": true,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Dhruv Jurel",
+        "player_id": 7260,
+        "is_overseas": false,
+        "role": "Wicketkeeper / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Riyan Parag",
+        "player_id": 6423,
+        "is_overseas": false,
+        "role": "Middle-Order / All-Rounder",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "player_id": 3297,
+        "is_overseas": true,
+        "role": "Finisher / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 11.0
+      },
+      {
+        "name": "Donovan Ferreira",
+        "player_id": 7708,
+        "is_overseas": true,
+        "role": "Finisher / Wicketkeeper",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.0
+      },
+      {
+        "name": "Shubham Dubey",
+        "player_id": 25139,
+        "is_overseas": false,
+        "role": "Middle-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.8
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "player_id": 152,
+        "is_overseas": false,
+        "role": "All-Rounder / Spin",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Sam Curran",
+        "player_id": 4409,
+        "is_overseas": true,
+        "role": "All-Rounder / Pace",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 2.4
+      },
+      {
+        "name": "Ravi Singh",
+        "player_id": 60700,
+        "is_overseas": false,
+        "role": "Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.95
+      },
+      {
+        "name": "Jofra Archer",
+        "player_id": 3298,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 12.5
+      },
+      {
+        "name": "Nandre Burger",
+        "player_id": 7312,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Kwena Maphaka",
+        "player_id": 26663,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.5
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "player_id": 7503,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 7.2
+      },
+      {
+        "name": "Vignesh Puthur",
+        "player_id": 48557,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Sandeep Sharma",
+        "player_id": 2411,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Tushar Deshpande",
+        "player_id": 6806,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 6.5
+      },
+      {
+        "name": "Kuldeep Sen",
+        "player_id": 7545,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.75
+      },
+      {
+        "name": "Sushant Mishra",
+        "player_id": 7269,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.9
+      },
+      {
+        "name": "Yudhvir Singh",
+        "player_id": 8580,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.35
+      },
+      {
+        "name": "Ashutosh Sharma",
+        "player_id": 8101,
+        "is_overseas": false,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Sakib Hussain",
+        "player_id": 35318,
+        "is_overseas": false,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 0.5
+      },
+      {
+        "name": "Nehal Wadhera",
+        "player_id": null,
+        "is_overseas": false,
+        "role": "Middle Order Batter",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Eshan Malinga",
+        "player_id": 39657,
+        "is_overseas": true,
+        "role": "Sling Death Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 1.0
+      }
+    ],
+    "baseline_sdi": 75.5,
+    "projected_post_auction_sdi": 35.5,
+    "sdi_improvement_pct": 53.0,
+    "tactical_starting_xi": {
+      "slot_5": "Shimron Hetmyer (LHB)",
+      "slot_6": "Dhruv Jurel (RHB, WK)",
+      "slot_7": "Ravindra Jadeja (LHB)",
+      "impact_sub": "Sakib Hussain (Pace Death) in for Hetmyer when bowling"
+    }
+  },
+  "3": {
+    "scenario_id": 3,
+    "title": "Overseas Bowling Reinforcement (Express Pace Battery)",
+    "strategy_summary": "Constructs a ferocious pace battery with Lockie Ferguson (150+ kph) and Nathan Ellis partnering Jofra Archer, relying on domestic finishers via Impact Player.",
+    "primary_focus": "GAP_3_INDIAN_DEATH_PACE",
+    "target_acquisitions": [
+      {
+        "name": "Ashutosh Sharma",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 85.2,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 92.82,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Contracted to DC for IPL 2026 (INR 3.80 Cr). 2027 retention status pending. Dated franchise reporting indicates DC trade window is currently closed for Ashutosh. Rajasthan Royals' Priority #1 target via trade window reopening or aggressive bidding if released. Estimated fair value ₹4.0–5.0 Cr; walk-away auction bidding ceiling ₹5.0 Cr in Scenario 1; maximum pre-auction bilateral trade consideration ceiling ₹8.5 Cr (strategic premium to induce DC to trade contracted asset)."
+      },
+      {
+        "name": "Sakib Hussain",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 62.6,
+        "estimated_price_cr": 0.5,
+        "squad_fit_score": 63.81,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Uncapped domestic express fast bowler (Age 21; DOB: 14 Dec 2004; 21y 11m as of Nov 2026). SRH 2026 contract (INR 0.30 Cr); 2027 retention pending. Clocked at 140.0–145.4 km/h peak velocity in BCCI domestic tracking (peak 142.4 km/h in Data Pack [Match 50362 vs MI, Over 6.4]). Priority #2 bowling target (fair value ₹0.30–0.50 Cr; walk-away ceiling ₹1.50 Cr)."
+      },
+      {
+        "name": "Lockie Ferguson",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 60.4,
+        "estimated_price_cr": 5.5,
+        "squad_fit_score": 58.89,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Lachlan Hammond Ferguson (ID 4692): Express overseas fast bowler (150+ kph) acquired by PBKS at the IPL 2025 Mega Auction (INR 2.00 Cr). 2027 retention status pending."
+      },
+      {
+        "name": "Nathan Ellis",
+        "role": "Death Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 62.8,
+        "estimated_price_cr": 3.0,
+        "squad_fit_score": 62.23,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "PBKS (2022–2024) -> Acquired by CSK at IPL 2025 Mega-Auction (₹2.00 Cr) -> Retained by CSK for IPL 2026 (₹2.00 Cr) -> Traded to SRH ahead of IPL 2027 per official IPL announcement dated 5 November 2026 at existing ₹2.00 Cr fee. Retention status conditional on SRH formal retention declaration; open auction availability unconfirmed."
+      }
+    ],
+    "total_estimated_spend_cr": 13.0,
+    "baseline_planning_budget_cr": 20.8,
+    "release_credits_cr": 4.0,
+    "conditional_planning_budget_cr": 24.8,
+    "illustrative_remaining_budget_cr": 11.8,
+    "remaining_purse_cr": 11.8,
+    "overseas_slots_acquired": 2,
+    "average_acquisition_pri": 67.75,
+    "total_pva_acquired": 137.67,
+    "gross_squad_pva": 137.67,
+    "active_starting_xi_pva": 137.67,
+    "net_incremental_matchday_pva": 137.67,
+    "displacement_table": [],
+    "pva_bridge": "Full squad acquisition PVA: +137.67 runs.",
+    "releases": [
+      {
+        "name": "Adam Milne",
+        "is_overseas": true,
+        "price_cr": 2.4,
+        "reason": "Overseas slot freed for Lockie Ferguson"
+      },
+      {
+        "name": "Donovan Ferreira",
+        "is_overseas": true,
+        "price_cr": 1.0,
+        "reason": "Overseas slot freed for Nathan Ellis"
+      },
+      {
+        "name": "Aman Rao Perala",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      },
+      {
+        "name": "Brijesh Sharma",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      }
+    ],
+    "overseas_released_count": 2,
+    "indian_released_count": 2,
+    "overseas_acquired_count": 2,
+    "indian_acquired_count": 2,
+    "retained_squad_count": 21,
+    "final_squad_size": 25,
+    "final_overseas_count": 8,
+    "feasibility_status": "FULLY FEASIBLE & COMPLIANT",
+    "full_squad_roster": [
+      {
+        "name": "Yashasvi Jaiswal",
+        "player_id": 6819,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 18.0
+      },
+      {
+        "name": "Vaibhav Sooryavanshi",
+        "player_id": 50284,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.1
+      },
+      {
+        "name": "Lhuan Pretorius",
+        "player_id": null,
+        "is_overseas": true,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Dhruv Jurel",
+        "player_id": 7260,
+        "is_overseas": false,
+        "role": "Wicketkeeper / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Riyan Parag",
+        "player_id": 6423,
+        "is_overseas": false,
+        "role": "Middle-Order / All-Rounder",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "player_id": 3297,
+        "is_overseas": true,
+        "role": "Finisher / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 11.0
+      },
+      {
+        "name": "Shubham Dubey",
+        "player_id": 25139,
+        "is_overseas": false,
+        "role": "Middle-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.8
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "player_id": 152,
+        "is_overseas": false,
+        "role": "All-Rounder / Spin",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Sam Curran",
+        "player_id": 4409,
+        "is_overseas": true,
+        "role": "All-Rounder / Pace",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 2.4
+      },
+      {
+        "name": "Ravi Singh",
+        "player_id": 60700,
+        "is_overseas": false,
+        "role": "Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.95
+      },
+      {
+        "name": "Jofra Archer",
+        "player_id": 3298,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 12.5
+      },
+      {
+        "name": "Nandre Burger",
+        "player_id": 7312,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Kwena Maphaka",
+        "player_id": 26663,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.5
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "player_id": 7503,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 7.2
+      },
+      {
+        "name": "Vignesh Puthur",
+        "player_id": 48557,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Sandeep Sharma",
+        "player_id": 2411,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Tushar Deshpande",
+        "player_id": 6806,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 6.5
+      },
+      {
+        "name": "Kuldeep Sen",
+        "player_id": 7545,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.75
+      },
+      {
+        "name": "Sushant Mishra",
+        "player_id": 7269,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.9
+      },
+      {
+        "name": "Yudhvir Singh",
+        "player_id": 8580,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.35
+      },
+      {
+        "name": "Yash Punja",
+        "player_id": 41503,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Ashutosh Sharma",
+        "player_id": 8101,
+        "is_overseas": false,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Sakib Hussain",
+        "player_id": 35318,
+        "is_overseas": false,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 0.5
+      },
+      {
+        "name": "Lockie Ferguson",
+        "player_id": 4692,
+        "is_overseas": true,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 5.5
+      },
+      {
+        "name": "Nathan Ellis",
+        "player_id": 7920,
+        "is_overseas": true,
+        "role": "Death Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 3.0
+      }
+    ],
+    "baseline_sdi": 75.5,
+    "projected_post_auction_sdi": 35.5,
+    "sdi_improvement_pct": 53.0,
+    "tactical_starting_xi": {
+      "slot_5": "Dhruv Jurel (RHB, WK)",
+      "slot_6": "Ashutosh Sharma (RHB)",
+      "slot_7": "Ravindra Jadeja (LHB)",
+      "impact_sub": "Lockie Ferguson (Express Pace) in for Ashutosh Sharma when bowling"
+    }
+  },
+  "4": {
+    "scenario_id": 4,
+    "title": "Balanced Squad Completion (Multi-Gap Optimization)",
+    "strategy_summary": "Coordinated acquisition addressing Gaps 1, 2, 3, and 5 simultaneously with actionable, eligible assets. Maximum cost-efficiency and depth across both batting collapse and death containment.",
+    "primary_focus": "MULTI_GAP_OPTIMIZATION",
+    "target_acquisitions": [
+      {
+        "name": "Ashutosh Sharma",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 85.2,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 92.82,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Contracted to DC for IPL 2026 (INR 3.80 Cr). 2027 retention status pending. Dated franchise reporting indicates DC trade window is currently closed for Ashutosh. Rajasthan Royals' Priority #1 target via trade window reopening or aggressive bidding if released. Estimated fair value ₹4.0–5.0 Cr; walk-away auction bidding ceiling ₹5.0 Cr in Scenario 1; maximum pre-auction bilateral trade consideration ceiling ₹8.5 Cr (strategic premium to induce DC to trade contracted asset)."
+      },
+      {
+        "name": "Sakib Hussain",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 62.6,
+        "estimated_price_cr": 0.5,
+        "squad_fit_score": 63.81,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Uncapped domestic express fast bowler (Age 21; DOB: 14 Dec 2004; 21y 11m as of Nov 2026). SRH 2026 contract (INR 0.30 Cr); 2027 retention pending. Clocked at 140.0–145.4 km/h peak velocity in BCCI domestic tracking (peak 142.4 km/h in Data Pack [Match 50362 vs MI, Over 6.4]). Priority #2 bowling target (fair value ₹0.30–0.50 Cr; walk-away ceiling ₹1.50 Cr)."
+      },
+      {
+        "name": "Sikandar Raza",
+        "role": "Spin Bowling All-Rounder",
+        "category": "All-Rounder",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 81.6,
+        "estimated_price_cr": 5.0,
+        "squad_fit_score": 78.36,
+        "primary_gap": "GAP_2_RHB_MIDDLE_ORDER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Previously contracted to PBKS; not on 2026 IPL roster. IPL 2027 registration and availability not officially confirmed. Base price bracket ₹1.5–2.0 Cr; fair value ₹1.5–2.0 Cr; Scenario 1 maximum scenario allocation buffer ₹5.0 Cr (allocated buffer to outbid rivals)."
+      },
+      {
+        "name": "Nathan Ellis",
+        "role": "Death Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 62.8,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 62.23,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "PBKS (2022–2024) -> Acquired by CSK at IPL 2025 Mega-Auction (₹2.00 Cr) -> Retained by CSK for IPL 2026 (₹2.00 Cr) -> Traded to SRH ahead of IPL 2027 per official IPL announcement dated 5 November 2026 at existing ₹2.00 Cr fee. Retention status conditional on SRH formal retention declaration; open auction availability unconfirmed."
+      },
+      {
+        "name": "Fabian Allen",
+        "role": "Slow Left-Arm Orthodox",
+        "category": "All-Rounder",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 58.2,
+        "estimated_price_cr": 2.0,
+        "squad_fit_score": 46.62,
+        "primary_gap": "GAP_5_SPIN_CONTROL",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Fabian Anthony Allen (ID 3272): Overseas SLA bowling all-rounder and elite boundary fielder. Unattached to 2026 IPL roster; registration pending."
+      }
+    ],
+    "total_estimated_spend_cr": 15.5,
+    "baseline_planning_budget_cr": 20.8,
+    "release_credits_cr": 4.3,
+    "conditional_planning_budget_cr": 25.1,
+    "illustrative_remaining_budget_cr": 9.6,
+    "remaining_purse_cr": 9.6,
+    "overseas_slots_acquired": 3,
+    "average_acquisition_pri": 70.08,
+    "total_pva_acquired": 176.27,
+    "gross_squad_pva": 176.27,
+    "active_starting_xi_pva": 176.27,
+    "net_incremental_matchday_pva": 176.27,
+    "displacement_table": [],
+    "pva_bridge": "Full squad acquisition PVA: +176.27 runs.",
+    "releases": [
+      {
+        "name": "Adam Milne",
+        "is_overseas": true,
+        "price_cr": 2.4,
+        "reason": "Overseas slot freed for Sikandar Raza"
+      },
+      {
+        "name": "Donovan Ferreira",
+        "is_overseas": true,
+        "price_cr": 1.0,
+        "reason": "Overseas slot freed for Nathan Ellis"
+      },
+      {
+        "name": "Lhuan Pretorius",
+        "is_overseas": true,
+        "price_cr": 0.3,
+        "reason": "Overseas slot freed for Fabian Allen"
+      },
+      {
+        "name": "Aman Rao Perala",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      },
+      {
+        "name": "Brijesh Sharma",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      }
+    ],
+    "overseas_released_count": 3,
+    "indian_released_count": 2,
+    "overseas_acquired_count": 3,
+    "indian_acquired_count": 2,
+    "retained_squad_count": 20,
+    "final_squad_size": 25,
+    "final_overseas_count": 8,
+    "feasibility_status": "FULLY FEASIBLE & COMPLIANT",
+    "full_squad_roster": [
+      {
+        "name": "Yashasvi Jaiswal",
+        "player_id": 6819,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 18.0
+      },
+      {
+        "name": "Vaibhav Sooryavanshi",
+        "player_id": 50284,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.1
+      },
+      {
+        "name": "Dhruv Jurel",
+        "player_id": 7260,
+        "is_overseas": false,
+        "role": "Wicketkeeper / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Riyan Parag",
+        "player_id": 6423,
+        "is_overseas": false,
+        "role": "Middle-Order / All-Rounder",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "player_id": 3297,
+        "is_overseas": true,
+        "role": "Finisher / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 11.0
+      },
+      {
+        "name": "Shubham Dubey",
+        "player_id": 25139,
+        "is_overseas": false,
+        "role": "Middle-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.8
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "player_id": 152,
+        "is_overseas": false,
+        "role": "All-Rounder / Spin",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Sam Curran",
+        "player_id": 4409,
+        "is_overseas": true,
+        "role": "All-Rounder / Pace",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 2.4
+      },
+      {
+        "name": "Ravi Singh",
+        "player_id": 60700,
+        "is_overseas": false,
+        "role": "Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.95
+      },
+      {
+        "name": "Jofra Archer",
+        "player_id": 3298,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 12.5
+      },
+      {
+        "name": "Nandre Burger",
+        "player_id": 7312,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Kwena Maphaka",
+        "player_id": 26663,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.5
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "player_id": 7503,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 7.2
+      },
+      {
+        "name": "Vignesh Puthur",
+        "player_id": 48557,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Sandeep Sharma",
+        "player_id": 2411,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Tushar Deshpande",
+        "player_id": 6806,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 6.5
+      },
+      {
+        "name": "Kuldeep Sen",
+        "player_id": 7545,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.75
+      },
+      {
+        "name": "Sushant Mishra",
+        "player_id": 7269,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.9
+      },
+      {
+        "name": "Yudhvir Singh",
+        "player_id": 8580,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.35
+      },
+      {
+        "name": "Yash Punja",
+        "player_id": 41503,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Ashutosh Sharma",
+        "player_id": 8101,
+        "is_overseas": false,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Sakib Hussain",
+        "player_id": 35318,
+        "is_overseas": false,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 0.5
+      },
+      {
+        "name": "Sikandar Raza",
+        "player_id": 2984,
+        "is_overseas": true,
+        "role": "Spin Bowling All-Rounder",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 5.0
+      },
+      {
+        "name": "Nathan Ellis",
+        "player_id": 7920,
+        "is_overseas": true,
+        "role": "Death Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Fabian Allen",
+        "player_id": 3272,
+        "is_overseas": true,
+        "role": "Slow Left-Arm Orthodox",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 2.0
+      }
+    ],
+    "baseline_sdi": 75.5,
+    "projected_post_auction_sdi": 30.5,
+    "sdi_improvement_pct": 59.6,
+    "tactical_starting_xi": {
+      "slot_5": "Dhruv Jurel (RHB, WK)",
+      "slot_6": "Ashutosh Sharma (RHB, Finisher)",
+      "slot_7": "Ravindra Jadeja (LHB, All-Rounder)",
+      "impact_sub": "Sakib Hussain (Death Pacer) in for Ashutosh Sharma when defending"
+    }
+  },
+  "5": {
+    "scenario_id": 5,
+    "title": "Best Statistical Value (Highest PRI & PVA Maximization)",
+    "strategy_summary": "Selects top eligible pressure performers (Miller, Overton, Ashutosh, Sakib, Ellis). Represents upper-bound clutch quality at the expense of higher spend and overseas slot usage.",
+    "primary_focus": "PURE_STATISTICAL_EXCELLENCE",
+    "target_acquisitions": [
+      {
+        "name": "Ashutosh Sharma",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 85.2,
+        "estimated_price_cr": 4.0,
+        "squad_fit_score": 92.82,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Contracted to DC for IPL 2026 (INR 3.80 Cr). 2027 retention status pending. Dated franchise reporting indicates DC trade window is currently closed for Ashutosh. Rajasthan Royals' Priority #1 target via trade window reopening or aggressive bidding if released. Estimated fair value ₹4.0–5.0 Cr; walk-away auction bidding ceiling ₹5.0 Cr in Scenario 1; maximum pre-auction bilateral trade consideration ceiling ₹8.5 Cr (strategic premium to induce DC to trade contracted asset)."
+      },
+      {
+        "name": "David Miller",
+        "role": "Finisher / Middle Order",
+        "category": "Batter",
+        "batting_type": "LHB",
+        "is_overseas": true,
+        "pri_score": 84.3,
+        "estimated_price_cr": 7.5,
+        "squad_fit_score": 78.5,
+        "primary_gap": "GAP_1_INDIAN_FINISHER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Acquired by Delhi Capitals for IPL 2026 at INR 2.00 Cr base price. 2027 retention status pending formal franchise declaration. Represented GT (2022–2024), DC (2025–2026); stale GT release narratives and stale ₹7.5 Cr baseline price removed. Actionable via pre-auction trade or if released into 2027 auction pool (base ₹2.0 Cr, bidding ceiling up to ₹7.5 Cr in Scenario 5 if released)."
+      },
+      {
+        "name": "Sakib Hussain",
+        "role": "Express Fast Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": false,
+        "pri_score": 62.6,
+        "estimated_price_cr": 0.5,
+        "squad_fit_score": 63.81,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Uncapped domestic express fast bowler (Age 21; DOB: 14 Dec 2004; 21y 11m as of Nov 2026). SRH 2026 contract (INR 0.30 Cr); 2027 retention pending. Clocked at 140.0–145.4 km/h peak velocity in BCCI domestic tracking (peak 142.4 km/h in Data Pack [Match 50362 vs MI, Over 6.4]). Priority #2 bowling target (fair value ₹0.30–0.50 Cr; walk-away ceiling ₹1.50 Cr)."
+      },
+      {
+        "name": "Jamie Overton",
+        "role": "Pace Bowling All-Rounder",
+        "category": "All-Rounder",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 61.3,
+        "estimated_price_cr": 3.5,
+        "squad_fit_score": 49.55,
+        "primary_gap": "GAP_4_PACE_ALLROUNDER",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "Overseas fast bowler and aggressive lower-order batter contracted to CSK in 2026 (INR 1.50 Cr). 2027 status pending; conditional target only. Base price not verified as INR 1.00 Cr."
+      },
+      {
+        "name": "Nathan Ellis",
+        "role": "Death Bowler",
+        "category": "Bowler",
+        "batting_type": "RHB",
+        "is_overseas": true,
+        "pri_score": 62.8,
+        "estimated_price_cr": 4.5,
+        "squad_fit_score": 62.23,
+        "primary_gap": "GAP_3_INDIAN_DEATH_PACE",
+        "availability_status": "REPORTED / NOT OFFICIALLY CONFIRMED",
+        "availability_detail": "PBKS (2022–2024) -> Acquired by CSK at IPL 2025 Mega-Auction (₹2.00 Cr) -> Retained by CSK for IPL 2026 (₹2.00 Cr) -> Traded to SRH ahead of IPL 2027 per official IPL announcement dated 5 November 2026 at existing ₹2.00 Cr fee. Retention status conditional on SRH formal retention declaration; open auction availability unconfirmed."
+      }
+    ],
+    "total_estimated_spend_cr": 20.0,
+    "baseline_planning_budget_cr": 20.8,
+    "release_credits_cr": 4.3,
+    "conditional_planning_budget_cr": 25.1,
+    "illustrative_remaining_budget_cr": 5.1,
+    "remaining_purse_cr": 5.1,
+    "overseas_slots_acquired": 3,
+    "average_acquisition_pri": 71.24,
+    "total_pva_acquired": 239.17,
+    "gross_squad_pva": 239.17,
+    "active_starting_xi_pva": 150.17,
+    "net_incremental_matchday_pva": 142.12,
+    "displacement_table": [
+      {
+        "incoming_player": "David Miller",
+        "incoming_pva": 102.8,
+        "incumbent_displaced": "Shimron Hetmyer",
+        "incumbent_pva_baseline": 46.3,
+        "net_difference": 56.5,
+        "role": "Finisher / Middle-Order (No. 5/6)",
+        "is_overseas": true
+      },
+      {
+        "incoming_player": "Ashutosh Sharma",
+        "incoming_pva": 78.87,
+        "incumbent_displaced": "Shubham Dubey",
+        "incumbent_pva_baseline": 17.0,
+        "net_difference": 61.87,
+        "role": "Indian Clutch Finisher (No. 7)",
+        "is_overseas": false
+      },
+      {
+        "incoming_player": "Sakib Hussain",
+        "incoming_pva": 14.8,
+        "incumbent_displaced": "Kuldeep Sen",
+        "incumbent_pva_baseline": -8.95,
+        "net_difference": 23.75,
+        "role": "Indian Death Pacer / Alternative A Impact Sub",
+        "is_overseas": false
+      },
+      {
+        "incoming_player": "Nathan Ellis",
+        "incoming_pva": 24.5,
+        "incumbent_displaced": "Kuldeep Sen / Overseas Reserve",
+        "incumbent_pva_baseline": -8.95,
+        "net_difference": 33.45,
+        "role": "Overseas Death Specialist / Alternative B 4th Overseas Impact Sub (+33.45 over Sen, +24.50 vs 0.0)",
+        "is_overseas": true
+      },
+      {
+        "incoming_player": "Jamie Overton",
+        "incoming_pva": 18.2,
+        "incumbent_displaced": "Overseas Bench Reserve",
+        "incumbent_pva_baseline": 0.0,
+        "net_difference": 0.0,
+        "role": "Tactical Overseas Bench / All-Rounder Cover Behind Curran",
+        "is_overseas": true
+      }
+    ],
+    "pva_bridge": "Multi-Incumbent Net Incremental Matchday PVA / Net Incremental Playing XII PVA: Alternative A (Sakib Hussain as Domestic Impact Sub): +142.12 runs (Miller +56.50 over Hetmyer [+46.30], Ashutosh +61.87 over Shubham Dubey [+17.00], Sakib +23.75 over Kuldeep Sen [-8.95]; 56.50 + 61.87 + 23.75 = 142.12 runs; +196.47 runs vs 0.0 baseline; partial Hetmyer-only adjusted PVA +150.17 runs). Alternative B (Nathan Ellis as 4th Overseas Impact Sub): +151.82 runs over incumbent Sen baseline (Miller +56.50, Ashutosh +61.87, Ellis +33.45 over Sen [-8.95]; 56.50 + 61.87 + 33.45 = 151.82 runs; or +142.87 runs vs 0.0 replacement baseline; +206.17 runs vs 0.0 baseline; partial Hetmyer-only adjusted PVA +159.87 runs). Gross Squad PVA is +239.17 runs (displayed as +239.2) across all 5 acquired assets (Miller +102.80, Ashutosh +78.87, Ellis +24.50, Overton +18.20, Sakib +14.80). Matchday Overseas Alignment: Starting XI features 3 overseas players (Miller, Curran, Archer), leaving exactly 1 overseas slot in the matchday XII. Under Alternative B, Nathan Ellis enters as the 4th overseas specialist (reaching exactly 4 overseas on pitch, 100% BCCI compliant). Under Alternative A, Sakib Hussain enters as domestic impact pacer (retaining 3 overseas). Jamie Overton provides pace-allrounder squad depth behind Curran; Overton and Ellis cannot be fielded concurrently with Miller, Curran, and Archer as 3 + 2 = 5 > 4.",
+    "releases": [
+      {
+        "name": "Adam Milne",
+        "is_overseas": true,
+        "price_cr": 2.4,
+        "reason": "Overseas slot freed for David Miller"
+      },
+      {
+        "name": "Donovan Ferreira",
+        "is_overseas": true,
+        "price_cr": 1.0,
+        "reason": "Overseas slot freed for Jamie Overton"
+      },
+      {
+        "name": "Lhuan Pretorius",
+        "is_overseas": true,
+        "price_cr": 0.3,
+        "reason": "Overseas slot freed for Nathan Ellis"
+      },
+      {
+        "name": "Aman Rao Perala",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      },
+      {
+        "name": "Brijesh Sharma",
+        "is_overseas": false,
+        "price_cr": 0.3,
+        "reason": "Fringe domestic depth"
+      }
+    ],
+    "overseas_released_count": 3,
+    "indian_released_count": 2,
+    "overseas_acquired_count": 3,
+    "indian_acquired_count": 2,
+    "retained_squad_count": 20,
+    "final_squad_size": 25,
+    "final_overseas_count": 8,
+    "feasibility_status": "FULLY FEASIBLE & COMPLIANT",
+    "full_squad_roster": [
+      {
+        "name": "Yashasvi Jaiswal",
+        "player_id": 6819,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 18.0
+      },
+      {
+        "name": "Vaibhav Sooryavanshi",
+        "player_id": 50284,
+        "is_overseas": false,
+        "role": "Top-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.1
+      },
+      {
+        "name": "Dhruv Jurel",
+        "player_id": 7260,
+        "is_overseas": false,
+        "role": "Wicketkeeper / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Riyan Parag",
+        "player_id": 6423,
+        "is_overseas": false,
+        "role": "Middle-Order / All-Rounder",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "player_id": 3297,
+        "is_overseas": true,
+        "role": "Finisher / Middle-Order",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 11.0
+      },
+      {
+        "name": "Shubham Dubey",
+        "player_id": 25139,
+        "is_overseas": false,
+        "role": "Middle-Order Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.8
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "player_id": 152,
+        "is_overseas": false,
+        "role": "All-Rounder / Spin",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 14.0
+      },
+      {
+        "name": "Sam Curran",
+        "player_id": 4409,
+        "is_overseas": true,
+        "role": "All-Rounder / Pace",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 2.4
+      },
+      {
+        "name": "Ravi Singh",
+        "player_id": 60700,
+        "is_overseas": false,
+        "role": "Batter",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.95
+      },
+      {
+        "name": "Jofra Archer",
+        "player_id": 3298,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 12.5
+      },
+      {
+        "name": "Nandre Burger",
+        "player_id": 7312,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Kwena Maphaka",
+        "player_id": 26663,
+        "is_overseas": true,
+        "role": "Fast Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 1.5
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "player_id": 7503,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 7.2
+      },
+      {
+        "name": "Vignesh Puthur",
+        "player_id": 48557,
+        "is_overseas": false,
+        "role": "Spin Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Sandeep Sharma",
+        "player_id": 2411,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "Tushar Deshpande",
+        "player_id": 6806,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 6.5
+      },
+      {
+        "name": "Kuldeep Sen",
+        "player_id": 7545,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.75
+      },
+      {
+        "name": "Sushant Mishra",
+        "player_id": 7269,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.9
+      },
+      {
+        "name": "Yudhvir Singh",
+        "player_id": 8580,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.35
+      },
+      {
+        "name": "Yash Punja",
+        "player_id": 41503,
+        "is_overseas": false,
+        "role": "Pace Bowler",
+        "status": "RETAINED_INCUMBENT",
+        "fee_cr": 0.3
+      },
+      {
+        "name": "Ashutosh Sharma",
+        "player_id": 8101,
+        "is_overseas": false,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.0
+      },
+      {
+        "name": "David Miller",
+        "player_id": 1077,
+        "is_overseas": true,
+        "role": "Finisher / Middle Order",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 7.5
+      },
+      {
+        "name": "Sakib Hussain",
+        "player_id": 35318,
+        "is_overseas": false,
+        "role": "Express Fast Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 0.5
+      },
+      {
+        "name": "Jamie Overton",
+        "player_id": 2382,
+        "is_overseas": true,
+        "role": "Pace Bowling All-Rounder",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 3.5
+      },
+      {
+        "name": "Nathan Ellis",
+        "player_id": 7920,
+        "is_overseas": true,
+        "role": "Death Bowler",
+        "status": "AUCTION_ACQUISITION",
+        "fee_cr": 4.5
+      }
+    ],
+    "baseline_sdi": 75.5,
+    "projected_post_auction_sdi": 30.5,
+    "sdi_improvement_pct": 59.6,
+    "tactical_starting_xi": {
+      "slot_5": "David Miller (LHB, Finisher)",
+      "slot_6": "Dhruv Jurel (RHB, WK)",
+      "slot_7": "Ashutosh Sharma (RHB, Finisher)",
+      "impact_sub": "Sakib Hussain / Nathan Ellis in when bowling"
+    },
+    "alternative_a": {
+      "impact_sub": "Sakib Hussain",
+      "sub_type": "Domestic Express Pacer",
+      "starting_xi_batting_first": [
+        "Yashasvi Jaiswal (IND)",
+        "Vaibhav Sooryavanshi (IND)",
+        "Riyan Parag (IND)",
+        "Dhruv Jurel (WK, IND)",
+        "David Miller (OVS)",
+        "Ashutosh Sharma (IND)",
+        "Ravindra Jadeja (IND)",
+        "Sam Curran (OVS)",
+        "Jofra Archer (OVS)",
+        "Ravi Bishnoi (IND)",
+        "Kuldeep Sen (IND)"
+      ],
+      "starting_xi_bowling_first": [
+        "Yashasvi Jaiswal (IND)",
+        "Vaibhav Sooryavanshi (IND)",
+        "Riyan Parag (IND)",
+        "Dhruv Jurel (WK, IND)",
+        "David Miller (OVS)",
+        "Ravindra Jadeja (IND)",
+        "Sam Curran (OVS)",
+        "Jofra Archer (OVS)",
+        "Sandeep Sharma (IND)",
+        "Ravi Bishnoi (IND)",
+        "Sakib Hussain (IND)"
+      ],
+      "nominated_substitutes": [
+        "Sakib Hussain (IND)",
+        "Sandeep Sharma (IND)",
+        "Tushar Deshpande (IND)",
+        "Shubham Dubey (IND)",
+        "Yudhvir Singh (IND)"
+      ],
+      "nominated_substitutes_bowling_first": [
+        "Ashutosh Sharma (IND)",
+        "Kuldeep Sen (IND)",
+        "Tushar Deshpande (IND)",
+        "Shubham Dubey (IND)",
+        "Yudhvir Singh (IND)"
+      ],
+      "nominated_substitutes_register": [
+        {
+          "player_name": "Sakib Hussain",
+          "player_id": 35318,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Express Fast Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Primary designated bowling Impact Player for 2nd innings death overs (overs 17-20)."
+        },
+        {
+          "player_name": "Sandeep Sharma",
+          "player_id": 2411,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical seam backup / new-ball swing contingency."
+        },
+        {
+          "player_name": "Tushar Deshpande",
+          "player_id": 6806,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical powerplay/middle overs hit-the-deck pace backup."
+        },
+        {
+          "player_name": "Shubham Dubey",
+          "player_id": 25139,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Middle-Order Batter",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical batting cover in event of top-order collapse prior to substitution."
+        },
+        {
+          "player_name": "Yudhvir Singh",
+          "player_id": 8580,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Depth all-round pace reserve."
+        }
+      ],
+      "nominated_substitutes_register_bowling_first": [
+        {
+          "player_name": "Ashutosh Sharma",
+          "player_id": 8101,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Finisher / Middle Order",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Primary designated batting Impact Player entering at #6 in 2nd innings chase."
+        },
+        {
+          "player_name": "Kuldeep Sen",
+          "player_id": 7545,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Seam bowling backup if injury occurs during 1st innings bowling effort."
+        },
+        {
+          "player_name": "Tushar Deshpande",
+          "player_id": 6806,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical pace reserve."
+        },
+        {
+          "player_name": "Shubham Dubey",
+          "player_id": 25139,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Middle-Order Batter",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Secondary batting reserve."
+        },
+        {
+          "player_name": "Yudhvir Singh",
+          "player_id": 8580,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Depth all-round pace reserve."
+        }
+      ],
+      "bowling_defense_plan_first_innings": {
+        "Jofra Archer (OVS)": 4,
+        "Sandeep Sharma (IND)": 4,
+        "Sakib Hussain (IND)": 4,
+        "Ravindra Jadeja (IND)": 4,
+        "Ravi Bishnoi (IND)": 4,
+        "total_overs": 20
+      },
+      "batting_order_chase_second_innings": [
+        "1. Yashasvi Jaiswal (IND)",
+        "2. Vaibhav Sooryavanshi (IND)",
+        "3. Riyan Parag (IND)",
+        "4. Dhruv Jurel (WK, IND)",
+        "5. David Miller (OVS)",
+        "6. Ashutosh Sharma (IND) [Impact Batter]",
+        "7. Ravindra Jadeja (IND)",
+        "8. Sam Curran (OVS)",
+        "9. Jofra Archer (OVS)",
+        "10. Ravi Bishnoi (IND)",
+        "11. Sandeep Sharma (IND)"
+      ],
+      "outgoing_player_batting_first": "Kuldeep Sen (IND) — designated depth seamer replaced at innings break; per BCCI IPL Impact Player Regulations takes no further part in the match and cannot field as substitute",
+      "outgoing_player_bowling_first": "Sakib Hussain (IND) — completed 4-over bowling spell; per BCCI IPL Impact Player Regulations takes no further part in the match and cannot field as substitute",
+      "incoming_impact_player_batting_first": "Sakib Hussain (IND) — enters as domestic express death pacer, directly replacing Kuldeep Sen and bowling 4 overs in 2nd innings",
+      "incoming_impact_player_bowling_first": "Ashutosh Sharma (IND) — enters to bat at #6 in 2nd innings chase, directly replacing Sakib Hussain",
+      "overseas_count_starting_xi_batting_first": 3,
+      "overseas_count_after_substitution_batting_first": 3,
+      "overseas_count_starting_xi_bowling_first": 3,
+      "overseas_count_after_substitution_bowling_first": 3,
+      "bcci_regulatory_compliance": "100% compliant with BCCI IPL Match Playing Conditions Clause 1.2.3 (5 eligible nominated substitutes from registered 25-man squad) and Clause 1.2.5 (maximum 4 overseas players on pitch). Governed by BCCI IPL Impact Player Regulations: exactly 3 overseas players on field throughout both innings; replaced player takes no further part in match. Note: Formal administrative enforcement remains subject to applicable BCCI IPL 2027 Match Playing Conditions.",
+      "displaced_incumbent": "Kuldeep Sen",
+      "displaced_pva_baseline": -8.95,
+      "model_estimated_rsbe": 28.57,
+      "conservative_scenario_planning_rsbe": 14.8,
+      "net_incremental_matchday_pva": 142.12,
+      "net_incremental_matchday_pva_bowling_first": "Not quantified",
+      "bowling_first_pva_status": "Not quantified (Qualitative tactical alternative)",
+      "overseas_on_pitch": 3,
+      "acquisitions_vs_zero_baseline": 196.47,
+      "partial_hetmyer_adjusted_pva": 150.17
+    },
+    "alternative_b": {
+      "impact_sub": "Nathan Ellis",
+      "sub_type": "4th Overseas Death Specialist",
+      "starting_xi_batting_first": [
+        "Yashasvi Jaiswal (IND)",
+        "Vaibhav Sooryavanshi (IND)",
+        "Riyan Parag (IND)",
+        "Dhruv Jurel (WK, IND)",
+        "David Miller (OVS)",
+        "Ashutosh Sharma (IND)",
+        "Ravindra Jadeja (IND)",
+        "Sam Curran (OVS)",
+        "Jofra Archer (OVS)",
+        "Ravi Bishnoi (IND)",
+        "Kuldeep Sen (IND)"
+      ],
+      "starting_xi_bowling_first": [
+        "Yashasvi Jaiswal (IND)",
+        "Vaibhav Sooryavanshi (IND)",
+        "Riyan Parag (IND)",
+        "Dhruv Jurel (WK, IND)",
+        "David Miller (OVS)",
+        "Ravindra Jadeja (IND)",
+        "Sam Curran (OVS)",
+        "Jofra Archer (OVS)",
+        "Sandeep Sharma (IND)",
+        "Ravi Bishnoi (IND)",
+        "Nathan Ellis (OVS)"
+      ],
+      "nominated_substitutes": [
+        "Nathan Ellis (OVS)",
+        "Sakib Hussain (IND)",
+        "Sandeep Sharma (IND)",
+        "Tushar Deshpande (IND)",
+        "Shubham Dubey (IND)"
+      ],
+      "nominated_substitutes_bowling_first": [
+        "Ashutosh Sharma (IND)",
+        "Kuldeep Sen (IND)",
+        "Tushar Deshpande (IND)",
+        "Shubham Dubey (IND)",
+        "Yudhvir Singh (IND)"
+      ],
+      "nominated_substitutes_register": [
+        {
+          "player_name": "Nathan Ellis",
+          "player_id": 7920,
+          "nationality": "Overseas (AUS)",
+          "is_overseas": true,
+          "role": "Death Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Primary designated overseas death bowling specialist Impact Player (enters as 4th overseas player, compliant with <= 4 overseas rule)."
+        },
+        {
+          "player_name": "Sakib Hussain",
+          "player_id": 35318,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Express Fast Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Domestic express pace alternative if overseas pacer is not deployed."
+        },
+        {
+          "player_name": "Sandeep Sharma",
+          "player_id": 2411,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical seam backup / new-ball swing contingency."
+        },
+        {
+          "player_name": "Tushar Deshpande",
+          "player_id": 6806,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical powerplay/middle overs hit-the-deck pace backup."
+        },
+        {
+          "player_name": "Shubham Dubey",
+          "player_id": 25139,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Middle-Order Batter",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical batting cover in event of top-order collapse prior to substitution."
+        }
+      ],
+      "nominated_substitutes_register_bowling_first": [
+        {
+          "player_name": "Ashutosh Sharma",
+          "player_id": 8101,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Finisher / Middle Order",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Primary designated batting Impact Player entering at #6 in 2nd innings chase."
+        },
+        {
+          "player_name": "Kuldeep Sen",
+          "player_id": 7545,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Seam bowling backup if injury occurs during 1st innings bowling effort."
+        },
+        {
+          "player_name": "Tushar Deshpande",
+          "player_id": 6806,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Tactical pace reserve."
+        },
+        {
+          "player_name": "Shubham Dubey",
+          "player_id": 25139,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Middle-Order Batter",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Secondary batting reserve."
+        },
+        {
+          "player_name": "Yudhvir Singh",
+          "player_id": 8580,
+          "nationality": "Indian",
+          "is_overseas": false,
+          "role": "Pace Bowler",
+          "registered_in_scenario_5_roster": true,
+          "starting_xi_member": false,
+          "eligible_for_nomination": true,
+          "reason_for_selection": "Depth all-round pace reserve."
+        }
+      ],
+      "bowling_defense_plan_first_innings": {
+        "Jofra Archer (OVS)": 4,
+        "Sandeep Sharma (IND)": 4,
+        "Nathan Ellis (OVS)": 4,
+        "Ravindra Jadeja (IND)": 4,
+        "Ravi Bishnoi (IND)": 4,
+        "total_overs": 20
+      },
+      "batting_order_chase_second_innings": [
+        "1. Yashasvi Jaiswal (IND)",
+        "2. Vaibhav Sooryavanshi (IND)",
+        "3. Riyan Parag (IND)",
+        "4. Dhruv Jurel (WK, IND)",
+        "5. David Miller (OVS)",
+        "6. Ashutosh Sharma (IND) [Impact Batter]",
+        "7. Ravindra Jadeja (IND)",
+        "8. Sam Curran (OVS)",
+        "9. Jofra Archer (OVS)",
+        "10. Ravi Bishnoi (IND)",
+        "11. Sandeep Sharma (IND)"
+      ],
+      "outgoing_player_batting_first": "Kuldeep Sen (IND) — designated depth seamer replaced at innings break; per BCCI IPL Impact Player Regulations takes no further part in the match and cannot field as substitute",
+      "outgoing_player_bowling_first": "Nathan Ellis (OVS) — completed 4-over bowling spell; per BCCI IPL Impact Player Regulations takes no further part in the match and cannot field as substitute",
+      "incoming_impact_player_batting_first": "Nathan Ellis (OVS) — enters as 4th overseas death specialist, directly replacing Kuldeep Sen and bowling 4 overs at the death in 2nd innings",
+      "incoming_impact_player_bowling_first": "Ashutosh Sharma (IND) — enters to bat at #6 in 2nd innings chase, directly replacing Nathan Ellis",
+      "overseas_count_starting_xi_batting_first": 3,
+      "overseas_count_after_substitution_batting_first": 4,
+      "overseas_count_starting_xi_bowling_first": 4,
+      "overseas_count_after_substitution_bowling_first": 3,
+      "bcci_regulatory_compliance": "100% compliant with BCCI IPL Match Playing Conditions Clause 1.2.3 (5 eligible nominated substitutes from registered 25-man squad) and Clause 1.2.5 (maximum 4 overseas players on pitch). Under Batting First, Starting XI has exactly 3 overseas players (Miller, Curran, Archer), permitting an overseas Impact Player (Ellis) to reach the 4-overseas cap. Under Bowling First, Starting XI has 4 overseas players (Miller, Curran, Archer, Ellis); at innings break Ellis is replaced by Indian batter Ashutosh Sharma, reducing active overseas to 3 (Miller, Curran, Archer <= 4). Governed by BCCI IPL Impact Player Regulations: replaced player takes no further part in match. Note: Formal administrative enforcement remains subject to applicable BCCI IPL 2027 Match Playing Conditions.",
+      "displaced_incumbent": "Kuldeep Sen",
+      "displaced_pva_baseline": -8.95,
+      "model_estimated_rsbe": 24.5,
+      "conservative_scenario_planning_rsbe": 24.5,
+      "full_incumbent_adjusted_pva": 151.82,
+      "net_incremental_matchday_pva": 151.82,
+      "net_incremental_matchday_pva_bowling_first": "Not quantified",
+      "bowling_first_pva_status": "Not quantified (Qualitative tactical alternative)",
+      "mixed_baseline_comparison_pva": 142.87,
+      "net_incremental_vs_zero_baseline": 142.87,
+      "acquisitions_vs_zero_baseline": 206.17,
+      "partial_hetmyer_adjusted_pva": 159.87,
+      "overseas_on_pitch": 4,
+      "overseas_on_pitch_defense": 4,
+      "overseas_on_pitch_chase": 3
+    }
+  }
+}
