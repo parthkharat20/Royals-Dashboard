@@ -4,18 +4,29 @@ import { PageTransition } from '@/components/layout/PageTransition'
 import { ChartWrapper } from '@/components/charts/ChartWrapper'
 import { Callout } from '@/components/ui/Callout'
 import { Badge } from '@/components/ui/Badge'
-import thresholdData from '@/data/thresholdSensitivity.json'
+import thresholdDataRaw from '@/data/thresholdSensitivity.json'
+
+const thresholdData = thresholdDataRaw as any
 
 export function PressureIntelligence() {
   const [activeTab, setActiveTab] = useState<'sensitivity' | 'evidence'>('sensitivity')
+  const [selectedThresholdIdx, setSelectedThresholdIdx] = useState<number>(2) // 0.60 default
 
   // Batting threshold sensitivity data
-  const batSens = (thresholdData as any).batting_sensitivity || []
+  const batSens = thresholdData?.batting_sensitivity || []
   const batX = batSens.map((t: any) => t.threshold ?? t.p_cut)
   const batQualified = batSens.map((t: any) => t.qualified_batters)
-  const batSpearman = ((thresholdData as any).rank_correlations || []).map(
-    (r: any) => r.batting_spearman ?? r.batting ?? 1.0
-  )
+  const batCorrelations = thresholdData?.rank_correlations?.batting || {}
+  const batSpearman = batX.map((x: number) => {
+    const key = String(x)
+    return batCorrelations[key] ?? 1.0
+  })
+
+  const batJaccardObj = thresholdData?.jaccard_similarity?.batting || {}
+  const batJaccard = batX.map((x: number) => {
+    const key = String(x)
+    return batJaccardObj[key] ?? 1.0
+  })
 
   const batSensChartData = [
     {
@@ -24,8 +35,8 @@ export function PressureIntelligence() {
       type: 'scatter',
       mode: 'lines+markers',
       name: 'Qualified Batters (Left)',
-      line: { color: '#E83E8C', width: 2.5 },
-      marker: { size: 8, color: '#E83E8C' },
+      line: { color: '#E83E8C', width: 3 },
+      marker: { size: 9, color: '#E83E8C' },
     },
     {
       x: batX,
@@ -34,31 +45,43 @@ export function PressureIntelligence() {
       mode: 'lines+markers',
       name: 'Spearman Rank Stability (Right)',
       yaxis: 'y2',
-      line: { color: '#FBBF24', width: 2, dash: 'dot' },
-      marker: { size: 7, color: '#FBBF24' },
+      line: { color: '#FBBF24', width: 2.5, dash: 'dot' },
+      marker: { size: 8, color: '#FBBF24' },
+    },
+    {
+      x: batX,
+      y: batJaccard,
+      type: 'scatter',
+      mode: 'lines+markers',
+      name: 'Jaccard Top 10 Overlap (Right)',
+      yaxis: 'y2',
+      line: { color: '#2563EB', width: 1.5, dash: 'dash' },
+      marker: { size: 6, color: '#2563EB' },
     },
   ]
 
   const batSensLayout = {
     title: {
-      text: 'Batting: Threshold Sensitivity (P_sit 0.50 to 0.70)',
+      text: 'Batting: Threshold Sensitivity & Rank Concordance',
       font: { family: 'Bebas Neue', size: 18, color: '#F8FAFC' },
     },
     xaxis: {
       title: 'Situational Pressure Threshold (P_sit)',
       dtick: 0.05,
       gridcolor: 'rgba(255,255,255,0.06)',
+      tickfont: { family: 'JetBrains Mono', color: '#94A3B8' },
     },
     yaxis: {
       title: 'Qualified Batters (Min 30 Balls)',
       side: 'left',
       gridcolor: 'rgba(255,255,255,0.06)',
+      tickfont: { family: 'JetBrains Mono', color: '#94A3B8' },
     },
     yaxis2: {
-      title: 'Spearman Rank Concordance (ρ)',
+      title: 'Concordance Index (ρ / Jaccard)',
       overlaying: 'y',
       side: 'right',
-      range: [0.5, 1.05],
+      range: [0.1, 1.1],
       gridcolor: 'rgba(0,0,0,0)',
       tickfont: { color: '#FBBF24', family: 'JetBrains Mono', size: 10 },
       titlefont: { color: '#FBBF24' },
@@ -84,16 +107,25 @@ export function PressureIntelligence() {
         font: { color: '#E83E8C', size: 11, family: 'Source Sans 3' },
       },
     ],
-    legend: { orientation: 'h', y: -0.22, x: 0.5, xanchor: 'center' },
+    legend: { orientation: 'h', y: -0.22, x: 0.5, xanchor: 'center', font: { size: 10 } },
+    margin: { t: 40, r: 45, b: 65, l: 45 },
   }
 
   // Bowling threshold sensitivity data
-  const bowlSens = (thresholdData as any).bowling_sensitivity || []
+  const bowlSens = thresholdData?.bowling_sensitivity || []
   const bowlX = bowlSens.map((t: any) => t.threshold ?? t.p_cut)
   const bowlQualified = bowlSens.map((t: any) => t.qualified_bowlers)
-  const bowlSpearman = ((thresholdData as any).rank_correlations || []).map(
-    (r: any) => r.bowling_spearman ?? r.bowling ?? 1.0
-  )
+  const bowlCorrelations = thresholdData?.rank_correlations?.bowling || {}
+  const bowlSpearman = bowlX.map((x: number) => {
+    const key = String(x)
+    return bowlCorrelations[key] ?? 1.0
+  })
+
+  const bowlJaccardObj = thresholdData?.jaccard_similarity?.bowling || {}
+  const bowlJaccard = bowlX.map((x: number) => {
+    const key = String(x)
+    return bowlJaccardObj[key] ?? 1.0
+  })
 
   const bowlSensChartData = [
     {
@@ -102,8 +134,8 @@ export function PressureIntelligence() {
       type: 'scatter',
       mode: 'lines+markers',
       name: 'Qualified Bowlers (Left)',
-      line: { color: '#2563EB', width: 2.5 },
-      marker: { size: 8, color: '#2563EB' },
+      line: { color: '#2563EB', width: 3 },
+      marker: { size: 9, color: '#2563EB' },
     },
     {
       x: bowlX,
@@ -112,31 +144,43 @@ export function PressureIntelligence() {
       mode: 'lines+markers',
       name: 'Spearman Rank Stability (Right)',
       yaxis: 'y2',
-      line: { color: '#059669', width: 2, dash: 'dot' },
-      marker: { size: 7, color: '#059669' },
+      line: { color: '#059669', width: 2.5, dash: 'dot' },
+      marker: { size: 8, color: '#059669' },
+    },
+    {
+      x: bowlX,
+      y: bowlJaccard,
+      type: 'scatter',
+      mode: 'lines+markers',
+      name: 'Jaccard Top 10 Overlap (Right)',
+      yaxis: 'y2',
+      line: { color: '#FBBF24', width: 1.5, dash: 'dash' },
+      marker: { size: 6, color: '#FBBF24' },
     },
   ]
 
   const bowlSensLayout = {
     title: {
-      text: 'Bowling: Threshold Sensitivity (P_sit 0.50 to 0.70)',
+      text: 'Bowling: Threshold Sensitivity & Rank Concordance',
       font: { family: 'Bebas Neue', size: 18, color: '#F8FAFC' },
     },
     xaxis: {
       title: 'Situational Pressure Threshold (P_sit)',
       dtick: 0.05,
       gridcolor: 'rgba(255,255,255,0.06)',
+      tickfont: { family: 'JetBrains Mono', color: '#94A3B8' },
     },
     yaxis: {
       title: 'Qualified Bowlers (Min 30 Balls)',
       side: 'left',
       gridcolor: 'rgba(255,255,255,0.06)',
+      tickfont: { family: 'JetBrains Mono', color: '#94A3B8' },
     },
     yaxis2: {
-      title: 'Spearman Rank Concordance (ρ)',
+      title: 'Concordance Index (ρ / Jaccard)',
       overlaying: 'y',
       side: 'right',
-      range: [0.5, 1.05],
+      range: [0.1, 1.1],
       gridcolor: 'rgba(0,0,0,0)',
       tickfont: { color: '#059669', family: 'JetBrains Mono', size: 10 },
       titlefont: { color: '#059669' },
@@ -162,8 +206,13 @@ export function PressureIntelligence() {
         font: { color: '#2563EB', size: 11, family: 'Source Sans 3' },
       },
     ],
-    legend: { orientation: 'h', y: -0.22, x: 0.5, xanchor: 'center' },
+    legend: { orientation: 'h', y: -0.22, x: 0.5, xanchor: 'center', font: { size: 10 } },
+    margin: { t: 40, r: 45, b: 65, l: 45 },
   }
+
+  // Active sensitivity row
+  const activeBatRow = batSens[selectedThresholdIdx] || batSens[2] || {}
+  const activeBowlRow = bowlSens[selectedThresholdIdx] || bowlSens[2] || {}
 
   return (
     <PageTransition>
@@ -225,7 +274,9 @@ export function PressureIntelligence() {
 
           <div className="mt-5 pt-4 border-t border-border-subtle text-caption text-text-muted flex items-center justify-between">
             <span>Continuous spectrum formulation</span>
-            <span className="font-mono text-rr-gold">P_sit ≥ 0.60 selected via cross-validated Jaccard stability</span>
+            <span className="font-mono text-rr-gold font-semibold">
+              P_sit ≥ 0.60 captures top ~40% highest leverage moments
+            </span>
           </div>
         </div>
 
@@ -267,7 +318,7 @@ export function PressureIntelligence() {
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-rr-pink font-bold">✓</span>
-                  <span><strong>Rank Concordance:</strong> Spearman ρ exceeds 0.80 across candidate thresholds.</span>
+                  <span><strong>Rank Concordance:</strong> Spearman ρ exceeds 0.82 across candidate thresholds.</span>
                 </div>
               </div>
             </div>
@@ -281,6 +332,73 @@ export function PressureIntelligence() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <ChartWrapper data={batSensChartData} layout={batSensLayout} height={380} />
             <ChartWrapper data={bowlSensChartData} layout={bowlSensLayout} height={380} />
+          </div>
+
+          {/* INTERACTIVE THRESHOLD AUDIT INSPECTOR */}
+          <div className="bg-surface p-5 rounded-lg border border-border-subtle space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border-subtle pb-3">
+              <div>
+                <h4 className="font-display text-lg text-text-primary">
+                  CROSS-THRESHOLD STABILITY INSPECTOR
+                </h4>
+                <p className="text-caption text-text-secondary">
+                  Compare Top 10 candidate retention as pressure threshold shifts from 0.50 to 0.70.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5">
+                {batX.map((t: number, idx: number) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedThresholdIdx(idx)}
+                    className={`px-3 py-1 text-xs font-mono rounded font-semibold transition-all ${
+                      selectedThresholdIdx === idx
+                        ? 'bg-rr-pink text-white shadow-[0_0_8px_rgba(232,62,140,0.4)]'
+                        : 'bg-surface-elevated text-text-secondary hover:text-white'
+                    }`}
+                  >
+                    P_sit ≥ {t.toFixed(2)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+              <div className="p-4 bg-surface-elevated rounded border border-border-subtle">
+                <div className="flex justify-between items-center mb-2 pb-2 border-b border-border-subtle">
+                  <span className="font-semibold text-text-primary">Batting at P_sit ≥ {activeBatRow.threshold}</span>
+                  <span className="font-mono text-rr-pink font-bold">{activeBatRow.qualified_batters} Qualified Batters</span>
+                </div>
+                <div className="text-[11px] text-text-muted mb-2">
+                  Sample deliveries: <span className="font-mono text-text-primary">{activeBatRow.pressure_deliveries_faced?.toLocaleString()}</span>
+                </div>
+                <div className="text-[11px] text-text-muted mb-1 font-semibold">Top 10 Candidates at this threshold:</div>
+                <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto">
+                  {activeBatRow.top_10_names?.map((name: string, i: number) => (
+                    <span key={i} className="px-2 py-0.5 bg-canvas rounded text-[11px] border border-white/5 text-text-secondary">
+                      #{i + 1} {name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-4 bg-surface-elevated rounded border border-border-subtle">
+                <div className="flex justify-between items-center mb-2 pb-2 border-b border-border-subtle">
+                  <span className="font-semibold text-text-primary">Bowling at P_sit ≥ {activeBowlRow.threshold}</span>
+                  <span className="font-mono text-rr-blue font-bold">{activeBowlRow.qualified_bowlers} Qualified Bowlers</span>
+                </div>
+                <div className="text-[11px] text-text-muted mb-2">
+                  Sample deliveries: <span className="font-mono text-text-primary">{activeBowlRow.pressure_legal_deliveries?.toLocaleString()}</span>
+                </div>
+                <div className="text-[11px] text-text-muted mb-1 font-semibold">Top 10 Candidates at this threshold:</div>
+                <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto">
+                  {activeBowlRow.top_10_names?.map((name: string, i: number) => (
+                    <span key={i} className="px-2 py-0.5 bg-canvas rounded text-[11px] border border-white/5 text-text-secondary">
+                      #{i + 1} {name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           <Callout title="THRESHOLD SENSITIVITY ROBUSTNESS PROOF" accent="gold">

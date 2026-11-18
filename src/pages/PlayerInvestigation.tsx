@@ -194,7 +194,7 @@ export function PlayerInvestigation() {
         <div className="bg-surface p-4 rounded-lg border border-border-subtle">
           <div className="text-caption text-text-muted">Match Success Rate</div>
           <div className="font-mono text-2xl font-bold text-rr-gold mt-1 tabular">
-            {fmt.pct(player.match_success_rate * 100)}
+            {fmt.pct(player.match_success_rate)}
           </div>
           <div className="text-[11px] text-text-secondary mt-0.5">
             {player.successful_matches} of {player.pressure_matches} matches won/drawn

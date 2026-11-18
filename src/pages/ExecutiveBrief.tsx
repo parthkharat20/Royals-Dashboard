@@ -147,7 +147,7 @@ export function ExecutiveBrief() {
                 </div>
                 <div>
                   <div className="text-text-muted">Match Success</div>
-                  <div className="font-mono text-sm font-bold text-rr-gold">{fmt.pct(topBatter.match_success_rate * 100)}</div>
+                  <div className="font-mono text-sm font-bold text-rr-gold">{fmt.pct(topBatter.match_success_rate)}</div>
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ export function ExecutiveBrief() {
                 </div>
                 <div>
                   <div className="text-text-muted">Match Success</div>
-                  <div className="font-mono text-sm font-bold text-rr-gold">{fmt.pct(topBowler.match_success_rate * 100)}</div>
+                  <div className="font-mono text-sm font-bold text-rr-gold">{fmt.pct(topBowler.match_success_rate)}</div>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ export function ExecutiveBrief() {
                         {b.press_balls}
                       </td>
                       <td className="py-3 px-3 text-right font-mono text-text-secondary tabular">
-                        {fmt.pct(b.match_success_rate * 100)}
+                        {fmt.pct(b.match_success_rate)}
                       </td>
                     </tr>
                   ))}
@@ -362,7 +362,7 @@ export function ExecutiveBrief() {
                         {bw.press_overs.toFixed(1)}
                       </td>
                       <td className="py-3 px-3 text-right font-mono text-text-secondary tabular">
-                        {fmt.pct(bw.match_success_rate * 100)}
+                        {fmt.pct(bw.match_success_rate)}
                       </td>
                     </tr>
                   ))}
