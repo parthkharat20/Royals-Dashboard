@@ -222,7 +222,7 @@ export function SquadImpact() {
                 <div className="text-right border-l border-border-subtle pl-6">
                   <div className="text-caption text-text-muted">Net Matchday PVA</div>
                   <div className="text-xl font-bold text-success">
-                    +{currentScenario.net_incremental_matchday_pva?.toFixed(1)}
+                    +{Number(currentScenario.net_incremental_matchday_pva).toFixed(2)} runs
                   </div>
                 </div>
               </div>
@@ -319,6 +319,23 @@ export function SquadImpact() {
                     </tbody>
                   </table>
                 </div>
+              </div>
+            )}
+
+            {/* PVA MATHEMATICAL BRIDGE */}
+            {currentScenario.pva_bridge && (
+              <div className="p-4 bg-canvas/60 rounded-lg border border-border-subtle text-xs space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-rr-gold font-mono uppercase text-[11px] tracking-wider">
+                    Canonical PVA Mathematical Bridge (Scenario {currentScenario.scenario_id})
+                  </span>
+                  <span className="font-mono text-success font-bold text-xs">
+                    Net Matchday: +{Number(currentScenario.net_incremental_matchday_pva).toFixed(2)} runs
+                  </span>
+                </div>
+                <p className="text-text-secondary leading-relaxed font-sans text-[11px]">
+                  {currentScenario.pva_bridge}
+                </p>
               </div>
             )}
           </div>

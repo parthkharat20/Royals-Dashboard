@@ -159,6 +159,45 @@ export interface CalibrationBin {
   residual_bias: number
 }
 
+// ─── RECRUITMENT DECISION LAYER ───
+export type DecisionTier = 'PURSUE' | 'MONITOR' | 'BENCHMARK ONLY' | 'WALK AWAY'
+
+// ─── OUTPUT B: DEFINITIVE FINAL 10 RECOMMENDATIONS ───
+export interface OutputBRecommendation {
+  rank: number
+  player_id: number
+  player_name: string
+  primary_role: string
+  discipline: string
+  handedness: string
+  pri_score: number
+  pri_40_35_25: number
+  canonical_balls: number
+  shrunk_press_metric: string
+  shrunk_press_value: number
+  shrunk_lift_pct: number
+  match_success_rate: number
+  raw_match_success_rate: number
+  match_record: string
+  wilson_95_lcb: number
+  contextual_pva: number
+  pva_label: string
+  ci_lower: number
+  ci_upper: number
+  core_category: string
+  availability_status: string
+  rr_fit: string
+  raw_economy?: number | null
+  shrunk_press_economy?: number | null
+  decision_tier: DecisionTier
+  decision_rationale: string
+  recruitment_risk: string
+  suitable_alternative: string
+  regulatory_source: string
+  verification_date: string
+  walk_away_conditions: string[]
+}
+
 // ─── PLAYER DOSSIER ───
 export interface PlayerDossier {
   player_id: number
@@ -170,7 +209,17 @@ export interface PlayerDossier {
   pri_score: number
   match_success_rate: number
   press_balls: number
-  squad_fit: {
+  decision_tier?: DecisionTier
+  squad_gap_addressed?: string
+  evidence_summary?: string
+  recruitment_risk?: string
+  suitable_alternatives?: string[]
+  availability_status?: string
+  verification_date?: string
+  regulatory_source?: string
+  walk_away_conditions?: string[]
+  wilson_95_lcb?: number
+  squad_fit?: {
     status: string
     tag: string
     gap_addressed: string

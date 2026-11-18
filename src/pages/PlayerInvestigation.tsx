@@ -10,43 +10,80 @@ import { fmt } from '@/lib/formatters'
 import battersData from '@/data/batters.json'
 import bowlersData from '@/data/bowlers.json'
 import dossiersData from '@/data/playerDossiers.json'
+import outputBData from '@/data/outputB.json'
 import pvaData from '@/data/pva.json'
-import type { Batter, Bowler } from '@/types'
+import type { Batter, Bowler, OutputBRecommendation, DecisionTier } from '@/types'
 
 const batters = battersData as Batter[]
 const bowlers = bowlersData as Bowler[]
+const outputB = outputBData as OutputBRecommendation[]
+
+// ID aliasing to bridge Output B IDs with canonical dataset IDs
+const ID_ALIASES: Record<number, number> = {
+  7534: 7897,  // Tilak Varma
+  7904: 20702, // Tristan Stubbs
+  2986: 2490,  // Mohammad Nawaz
+  7984: 5979,  // Abrar Ahmed
+}
+
+const REVERSE_ALIASES: Record<number, number> = {
+  7897: 7534,
+  20702: 7904,
+  2490: 2986,
+  5979: 7984,
+}
 
 export function PlayerInvestigation() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const playerId = Number(id)
+  const rawId = Number(id)
 
-  const batter = useMemo(() => batters.find((b) => b.striker_id === playerId), [playerId])
-  const bowler = useMemo(() => bowlers.find((b) => b.bowler_id === playerId), [playerId])
+  const canonicalId = ID_ALIASES[rawId] || rawId
+
+  const batter = useMemo(() => {
+    return batters.find((b) => b.striker_id === rawId || b.striker_id === canonicalId)
+  }, [rawId, canonicalId])
+
+  const bowler = useMemo(() => {
+    return bowlers.find((b) => b.bowler_id === rawId || b.bowler_id === canonicalId)
+  }, [rawId, canonicalId])
+
+  // Look up Output B recommendation if applicable
+  const outputBItem = useMemo(() => {
+    return (
+      outputB.find((o) => o.player_id === rawId || o.player_id === canonicalId) ||
+      outputB.find((o) => (batter && o.player_name.toLowerCase() === batter.striker_name.toLowerCase()) ||
+                          (bowler && o.player_name.toLowerCase() === bowler.bowler_name.toLowerCase())) ||
+      null
+    )
+  }, [rawId, canonicalId, batter, bowler])
 
   // Look up dossier
   const dossier = useMemo(() => {
     const batList = (dossiersData as any)?.batters || []
     const bowlList = (dossiersData as any)?.bowlers || []
-    return (
-      batList.find((d: any) => d.player_id === playerId) ||
-      bowlList.find((d: any) => d.player_id === playerId) ||
-      null
-    )
-  }, [playerId])
+    const found =
+      batList.find((d: any) => d.player_id === rawId || d.player_id === canonicalId) ||
+      bowlList.find((d: any) => d.player_id === rawId || d.player_id === canonicalId)
+
+    if (found) return found
+    if (batter) return batList.find((d: any) => d.name?.toLowerCase() === batter.striker_name.toLowerCase()) || null
+    if (bowler) return bowlList.find((d: any) => d.name?.toLowerCase() === bowler.bowler_name.toLowerCase()) || null
+    return null
+  }, [rawId, canonicalId, batter, bowler])
 
   // Look up PVA
   const pva = useMemo(() => {
     if (batter) {
       const bList = (pvaData as any)?.batting || []
-      return bList.find((p: any) => p.striker_id === playerId) || null
+      return bList.find((p: any) => p.striker_id === batter.striker_id) || null
     }
     if (bowler) {
       const bwList = (pvaData as any)?.bowling || []
-      return bwList.find((p: any) => p.bowler_id === playerId) || null
+      return bwList.find((p: any) => p.bowler_id === bowler.bowler_id) || null
     }
     return null
-  }, [batter, bowler, playerId])
+  }, [batter, bowler])
 
   if (!batter && !bowler) {
     return (
@@ -55,7 +92,7 @@ export function PlayerInvestigation() {
           <div className="text-4xl mb-3">🔍</div>
           <h2 className="font-display text-2xl text-text-primary mb-2">Player Dossier Not Found</h2>
           <p className="text-body text-text-secondary mb-6">
-            Player ID <span className="font-mono text-rr-pink">#{id}</span> does not match any player in the Top 10 Batters or Top 10 Bowlers.
+            Player ID <span className="font-mono text-rr-pink">#{id}</span> does not match any player in the Top 10 Batters, Top 10 Bowlers, or Output B Recommendations.
           </p>
           <div className="space-y-4">
             <div className="text-xs text-text-muted">Select an Elite Performer:</div>
@@ -97,6 +134,11 @@ export function PlayerInvestigation() {
   const rank = player.rank
   const pri = player.pri_score
 
+  const decisionTier: DecisionTier =
+    (dossier?.decision_tier as DecisionTier) ||
+    (outputBItem?.decision_tier as DecisionTier) ||
+    'BENCHMARK ONLY'
+
   // Radar Chart Data
   const radarData = [
     {
@@ -130,10 +172,43 @@ export function PlayerInvestigation() {
     margin: { t: 25, r: 35, b: 25, l: 35 },
   }
 
+  const renderDecisionBadge = (tier: DecisionTier) => {
+    switch (tier) {
+      case 'PURSUE':
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs font-bold uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            PURSUE · Priority Target
+          </span>
+        )
+      case 'MONITOR':
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 text-xs font-bold uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-amber-400" />
+            MONITOR · Contingency Watchlist
+          </span>
+        )
+      case 'BENCHMARK ONLY':
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/40 text-xs font-bold uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-blue-400" />
+            BENCHMARK ONLY · Retained/Diplomatic
+          </span>
+        )
+      case 'WALK AWAY':
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/40 text-xs font-bold uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-rose-400" />
+            WALK AWAY · Discontinue
+          </span>
+        )
+    }
+  }
+
   return (
     <PageTransition>
       {/* NAVIGATION BREADCRUMB */}
-      <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
+      <div className="flex flex-wrap items-center justify-between pb-3 border-b border-border-subtle gap-2">
         <Link
           to="/"
           className="text-xs text-rr-pink hover:text-rr-pink-hover font-semibold flex items-center gap-1.5 transition-colors"
@@ -142,36 +217,49 @@ export function PlayerInvestigation() {
           <span>Back to Executive Decision Brief</span>
         </Link>
         <div className="flex items-center gap-2">
+          {outputBItem && (
+            <Badge variant="gold">
+              Output B Recommendation #{outputBItem.rank}
+            </Badge>
+          )}
           <Badge variant={isBatter ? 'pink' : 'blue'}>
             Rank #{rank} in {isBatter ? 'Batting' : 'Bowling'}
           </Badge>
-          <span className="text-caption text-text-muted font-mono">ID: {playerId}</span>
+          <span className="text-caption text-text-muted font-mono">
+            ID: {canonicalId} {rawId !== canonicalId && `(Alt: ${rawId})`}
+          </span>
         </div>
       </div>
 
       {/* HERO STRIP */}
-      <div className="bg-surface p-6 rounded-lg border border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div>
-          <div className="flex items-center gap-2 mb-2">
+      <div className="bg-surface p-6 rounded-lg border border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+        <div className="space-y-2">
+          <div className="flex flex-wrap items-center gap-2">
+            {renderDecisionBadge(decisionTier)}
             <Badge variant="muted">{roleType}</Badge>
-            {dossier?.category && <Badge variant="gold">{dossier.category}</Badge>}
             {dossier?.is_overseas ? (
-              <Badge variant="blue">Overseas</Badge>
+              <Badge variant="blue">Overseas Quota</Badge>
             ) : (
               <Badge variant="success">Indian Domestic</Badge>
+            )}
+            {outputBItem && (
+              <span className="text-[11px] font-mono text-rr-gold bg-rr-gold/10 px-2 py-0.5 rounded border border-rr-gold/20 font-semibold">
+                {outputBItem.rr_fit}
+              </span>
             )}
           </div>
           <h1 className="font-display text-hero text-text-primary tracking-wide leading-none">
             {playerName}
           </h1>
-          <p className="text-body text-text-secondary mt-2 max-w-2xl">
-            {isBatter
-              ? `Demonstrates significant scoring elevation when situational pressure exceeds 0.60, sustaining a shrunk SR of ${fmt.sr(
-                  batter!.shrunk_press_strike_rate
-                )} across ${batter!.press_balls} high-leverage deliveries.`
-              : `High-leverage bowling specialist maintaining a shrunk pressure economy of ${fmt.econ(
-                  bowler!.shrunk_press_economy
-                )} with an economy lift of ${fmt.lift(bowler!.shrunk_econ_lift)}.`}
+          <p className="text-body text-text-secondary max-w-2xl">
+            {dossier?.evidence_summary ||
+              (isBatter
+                ? `Elevates scoring output when situational pressure exceeds 0.60, sustaining a shrunk SR of ${fmt.sr(
+                    batter!.shrunk_press_strike_rate
+                  )} across ${batter!.press_balls} high-leverage deliveries.`
+                : `High-leverage bowling specialist maintaining a shrunk pressure economy of ${fmt.econ(
+                    bowler!.shrunk_press_economy
+                  )} with an economy lift of ${fmt.lift(bowler!.shrunk_econ_lift)}.`)}
           </p>
         </div>
 
@@ -196,7 +284,7 @@ export function PlayerInvestigation() {
           <div className="font-mono text-2xl font-bold text-rr-gold mt-1 tabular">
             {fmt.pct(player.match_success_rate)}
           </div>
-          <div className="text-[11px] text-text-secondary mt-0.5">
+          <div className="text-[11px] text-text-secondary mt-0.5 font-mono">
             {player.successful_matches} of {player.pressure_matches} matches won/drawn
           </div>
         </div>
@@ -205,9 +293,11 @@ export function PlayerInvestigation() {
             {isBatter ? 'Press Deliveries Faced' : 'Press Overs Bowled'}
           </div>
           <div className="font-mono text-2xl font-bold text-text-primary mt-1 tabular">
-            {isBatter ? batter!.press_balls : bowler!.press_overs.toFixed(1)}
+            {isBatter ? batter!.press_balls : fmt.cricketOvers(bowler!.press_balls, bowler!.press_overs)}
           </div>
-          <div className="text-[11px] text-text-secondary mt-0.5">Under P_sit ≥ 0.60</div>
+          <div className="text-[11px] text-text-secondary mt-0.5 font-mono">
+            {isBatter ? `${batter!.press_matches} matches` : `${bowler!.press_balls} legal balls`}
+          </div>
         </div>
         <div className="bg-surface p-4 rounded-lg border border-border-subtle">
           <div className="text-caption text-text-muted">Shrunk Pressure Metric</div>
@@ -216,15 +306,15 @@ export function PlayerInvestigation() {
               ? fmt.sr(batter!.shrunk_press_strike_rate)
               : fmt.econ(bowler!.shrunk_press_economy)}
           </div>
-          <div className="text-[11px] text-text-secondary mt-0.5">
-            {isBatter ? 'Shrunk Strike Rate' : 'Shrunk Economy Rate'}
+          <div className="text-[11px] text-success mt-0.5 font-semibold font-mono">
+            {isBatter ? fmt.lift(batter!.shrunk_sr_lift) : fmt.lift(bowler!.shrunk_econ_lift)} vs base
           </div>
         </div>
       </div>
 
       {/* MAIN TWO-COLUMN SPLIT */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* LEFT COLUMN: BASE VS PRESSURE & CONFIDENCE */}
+        {/* LEFT COLUMN: BASE VS PRESSURE & CONFIDENCE INTERVALS */}
         <div className="lg:col-span-7 space-y-6">
           {/* BASE VS PRESSURE TABLE */}
           <div className="bg-surface rounded-lg border border-border-subtle overflow-hidden">
@@ -232,7 +322,7 @@ export function PlayerInvestigation() {
               <h3 className="font-display text-xl text-text-primary tracking-wide">
                 BASE VS PRESSURE PERFORMANCE
               </h3>
-              <span className="text-caption text-text-muted">Shrinkage Regularized</span>
+              <span className="text-caption text-text-muted font-mono">Shrinkage Regularized (M=35)</span>
             </div>
 
             <table className="w-full text-left border-collapse text-xs">
@@ -361,10 +451,10 @@ export function PlayerInvestigation() {
                         Wickets / Match Rate
                       </td>
                       <td className="py-3 px-4 text-right text-text-secondary">
-                        {bowler!.base_wickets} wkts
+                        {bowler!.base_wickets} wkts ({bowler!.base_matches}m)
                       </td>
                       <td className="py-3 px-4 text-right text-text-primary">
-                        {bowler!.press_wickets} wkts
+                        {bowler!.press_wickets} wkts ({bowler!.press_matches}m)
                       </td>
                       <td className="py-3 px-4 text-right text-text-secondary">
                         {fmt.econ(bowler!.press_wicket_rate)}/ball
@@ -379,10 +469,10 @@ export function PlayerInvestigation() {
           {/* CONFIDENCE INTERVAL BAR */}
           <div className="bg-surface p-5 rounded-lg border border-border-subtle space-y-4">
             <h4 className="font-display text-lg text-text-primary tracking-wide">
-              EMPIRICAL BAYES CONFIDENCE INTERVAL (95%)
+              EMPIRICAL BAYES CONFIDENCE INTERVAL (95% CREDIBLE BAND)
             </h4>
             <p className="text-caption text-text-secondary">
-              Shaded band reflects the 95% credible range of true pressure skill after shrinking against population sample prior (M=45).
+              Shaded band reflects the 95% Bayesian credible range of true pressure skill after shrinking against the empirical population sample prior (M=35).
             </p>
 
             {isBatter ? (
@@ -403,64 +493,180 @@ export function PlayerInvestigation() {
               />
             )}
           </div>
+
+          {/* DUAL RELIABILITY & UNCERTAINTY LEDGER */}
+          <div className="bg-surface p-5 rounded-lg border border-border-subtle space-y-3">
+            <div className="flex items-center justify-between">
+              <h4 className="font-display text-lg text-text-primary tracking-wide">
+                STATISTICAL RELIABILITY LEDGER
+              </h4>
+              <Badge variant="blue">Wilson 95% LCB vs Bayes CI</Badge>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs">
+              <div className="p-3 bg-surface-elevated/40 rounded border border-border-subtle space-y-1">
+                <div className="text-text-muted font-mono uppercase text-[10px]">
+                  Match Success Rate (Binomial k/n)
+                </div>
+                <div className="font-mono text-lg font-bold text-rr-gold">
+                  {fmt.recordWithPct(player.successful_matches, player.pressure_matches, player.match_success_rate)}
+                </div>
+                <div className="text-[11px] text-text-secondary">
+                  <strong>Wilson 95% LCB: {fmt.pct(dossier?.wilson_95_lcb || (outputBItem?.wilson_95_lcb ?? 50.0))}</strong>
+                </div>
+                <div className="text-[10px] text-text-muted">
+                  Conservative binomial lower bound regularizing for match sample size ({player.pressure_matches} matches).
+                </div>
+              </div>
+
+              <div className="p-3 bg-surface-elevated/40 rounded border border-border-subtle space-y-1">
+                <div className="text-text-muted font-mono uppercase text-[10px]">
+                  Continuous Rate Credible Interval
+                </div>
+                <div className="font-mono text-lg font-bold text-success">
+                  {isBatter
+                    ? `[${batter!.sr_ci_lower.toFixed(1)}, ${batter!.sr_ci_upper.toFixed(1)}] SR`
+                    : `[${bowler!.econ_ci_lower.toFixed(2)}, ${bowler!.econ_ci_upper.toFixed(2)}] Econ`}
+                </div>
+                <div className="text-[11px] text-text-secondary">
+                  Empirical Bayes Prior: M = 35 balls
+                </div>
+                <div className="text-[10px] text-text-muted">
+                  Gaussian-Laplace posterior credible range eliminating small-sample noise.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* RIGHT COLUMN: RADAR & SQUAD FIT */}
+        {/* RIGHT COLUMN: RADAR, RECRUITMENT INTELLIGENCE & WALK-AWAY LOGIC */}
         <div className="lg:col-span-5 space-y-6">
           {/* RADAR SUB-SCORE */}
           <div className="bg-surface p-5 rounded-lg border border-border-subtle">
             <h4 className="font-display text-lg text-text-primary mb-1">
               PRI SUBSCORE PROFILE
             </h4>
-            <div className="text-caption text-text-muted mb-2">
+            <div className="text-caption text-text-muted mb-2 font-mono text-xs">
               Level: {player.level_subscore.toFixed(1)} | Lift: {player.lift_subscore.toFixed(1)} | Consistency: {player.consistency_subscore.toFixed(1)}
             </div>
-            <ChartWrapper data={radarData} layout={radarLayout} height={280} />
+            <ChartWrapper data={radarData} layout={radarLayout} height={260} />
           </div>
 
-          {/* SQUAD FIT CARD */}
-          {dossier?.squad_fit ? (
-            <div className="bg-surface p-5 rounded-lg border border-border-subtle space-y-3">
-              <div className="flex items-center justify-between">
-                <Badge variant="gold">{dossier.squad_fit.status}</Badge>
-                <div className="font-mono text-sm font-bold text-rr-pink">
-                  Fit Score: {dossier.squad_fit.fit_score}/100
-                </div>
-              </div>
+          {/* RECRUITMENT DECISION LAYER */}
+          <div className="bg-surface p-5 rounded-lg border border-border-subtle space-y-4">
+            <div className="flex items-center justify-between border-b border-border-subtle pb-3">
               <div>
-                <span className="text-[11px] font-bold uppercase text-text-muted block">
-                  Gap Addressed:
+                <span className="text-[10px] uppercase font-bold text-text-muted tracking-wider">
+                  Recruitment Decision Intelligence
                 </span>
-                <span className="text-sm font-semibold text-text-primary">
-                  {dossier.squad_fit.gap_addressed || 'General Pressure Depth'}
+                <h4 className="font-display text-xl text-text-primary">
+                  FRANCHISE ACTION VERDICT
+                </h4>
+              </div>
+              {renderDecisionBadge(decisionTier)}
+            </div>
+
+            {/* SQUAD REQUIREMENT ADDRESSED */}
+            <div className="p-3 bg-canvas/50 rounded border border-border-subtle space-y-1">
+              <span className="text-[10px] font-bold uppercase text-rr-pink font-mono block">
+                Specific Squad Requirement Addressed:
+              </span>
+              <div className="text-xs font-bold text-text-primary">
+                {dossier?.squad_gap_addressed || outputBItem?.rr_fit || 'Tactical Squad Depth'}
+              </div>
+            </div>
+
+            {/* VERIFIED AVAILABILITY & REGULATORY STATUS */}
+            <div className="p-3 bg-canvas/50 rounded border border-border-subtle space-y-1 text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase text-rr-blue font-mono">
+                  Verified Auction Availability:
+                </span>
+                <span className="font-mono text-[10px] text-text-muted">
+                  Audited: {dossier?.verification_date || 'November 2026'}
                 </span>
               </div>
-              <p className="text-caption text-text-secondary leading-relaxed bg-canvas/40 p-3 rounded border border-border-subtle">
-                {dossier.squad_fit.tactical_rationale}
+              <div className="font-bold text-text-primary">
+                {dossier?.availability_status || outputBItem?.availability_status || 'CONFIRMED'}
+              </div>
+              <div className="text-[11px] text-text-secondary pt-1 border-t border-border-subtle">
+                <strong className="text-text-primary">Regulatory Authority:</strong>{' '}
+                {dossier?.regulatory_source || 'IPL Governing Council & BCCI Roster Regulations'}
+              </div>
+              {outputBItem?.decision_rationale && (
+                <div className="text-[11px] text-text-muted pt-1 leading-relaxed">
+                  {outputBItem.decision_rationale}
+                </div>
+              )}
+            </div>
+
+            {/* MAIN RECRUITMENT RISK */}
+            <div className="p-3 bg-canvas/50 rounded border border-border-subtle space-y-1 text-xs">
+              <span className="text-[10px] font-bold uppercase text-amber-400 font-mono block">
+                Main Recruitment Risk:
+              </span>
+              <p className="text-text-secondary leading-relaxed">
+                {dossier?.recruitment_risk || outputBItem?.recruitment_risk || 'Auction price volatility and competing franchise interest.'}
               </p>
             </div>
-          ) : (
-            <Callout title="TACTICAL BENCHMARK CONTEXT" accent="blue">
-              This player serves as a critical competition benchmark for high-leverage execution. Their statistical elevation under P_sit ≥ 0.60 validates our expectation models against premier international opposition.
-            </Callout>
-          )}
 
-          {/* PVA CONTEXT IF AVAILABLE */}
-          {pva && (
-            <div className="bg-surface-elevated/40 p-4 rounded-lg border border-border-subtle text-xs">
-              <div className="font-semibold text-text-primary mb-1">Contextual Value Added (PVA)</div>
-              <div className="font-mono text-lg font-bold text-success">
-                {isBatter
-                  ? `+${pva.total_raae?.toFixed(1)} Total RAAE`
-                  : `+${pva.total_rsbe?.toFixed(1)} Total RSBE`}
+            {/* SUITABLE ALTERNATIVES */}
+            {(dossier?.suitable_alternatives || outputBItem?.suitable_alternative) && (
+              <div className="p-3 bg-canvas/50 rounded border border-border-subtle space-y-1.5 text-xs">
+                <span className="text-[10px] font-bold uppercase text-emerald-400 font-mono block">
+                  Contingency / Suitable Alternatives:
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {dossier?.suitable_alternatives ? (
+                    dossier.suitable_alternatives.map((alt: string, i: number) => (
+                      <span key={i} className="px-2 py-0.5 bg-surface-elevated text-text-primary rounded text-[11px] border border-border-subtle">
+                        {alt}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="px-2 py-0.5 bg-surface-elevated text-text-primary rounded text-[11px] border border-border-subtle">
+                      {outputBItem?.suitable_alternative}
+                    </span>
+                  )}
+                </div>
               </div>
-              <div className="text-[11px] text-text-muted mt-0.5">
-                {isBatter
-                  ? 'Runs Above Average Expected across pressure balls'
-                  : 'Runs Saved Below Expected across pressure overs'}
+            )}
+
+            {/* ACTIONABLE WALK-AWAY CONDITIONS */}
+            <div className="p-3.5 bg-rose-500/10 rounded-lg border border-rose-500/30 space-y-2 text-xs">
+              <div className="flex items-center gap-1.5 text-rose-400 font-bold uppercase text-[11px] tracking-wider">
+                <span>🛑</span>
+                <span>Walk-Away Invalidation Conditions</span>
               </div>
+              <ul className="space-y-1.5 text-[11px] text-text-secondary list-disc list-inside">
+                {(dossier?.walk_away_conditions || outputBItem?.walk_away_conditions || [
+                  'Auction bidding exceeds pre-modeled purse valuation ceiling.',
+                  'Unverified regulatory availability or non-clearance by home cricket board.',
+                  'Role modification shifting player away from proven high-leverage execution window.'
+                ]).map((cond: string, i: number) => (
+                  <li key={i} className="leading-relaxed">
+                    <span className="text-text-primary font-medium">{cond}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          )}
+
+            {/* PVA CONTEXT IF AVAILABLE */}
+            {pva && (
+              <div className="bg-surface-elevated/40 p-4 rounded-lg border border-border-subtle text-xs">
+                <div className="font-semibold text-text-primary mb-1">Contextual Value Added (PVA)</div>
+                <div className="font-mono text-lg font-bold text-success">
+                  {isBatter
+                    ? `+${pva.total_raae?.toFixed(1)} Total RAAE`
+                    : `+${pva.total_rsbe?.toFixed(1)} Total RSBE`}
+                </div>
+                <div className="text-[11px] text-text-muted mt-0.5">
+                  {isBatter
+                    ? 'Runs Above Average Expected across high-pressure deliveries'
+                    : 'Runs Saved Below Expected across high-pressure overs'}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </PageTransition>

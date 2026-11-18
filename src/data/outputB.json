@@ -25,9 +25,16 @@
     "rr_fit": "Elite Benchmark / Middle-Overs Stability",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "Confirmed retained by Mumbai Indians under IPL Capped Retention Rule 1 (\u20b918.0 Cr slab). Serves as our primary gold-standard anchor benchmark against which all targets are evaluated.",
+    "recruitment_risk": "Zero auction availability; retaining franchise will not entertain trade inquiries.",
+    "suitable_alternative": "Dhruv Jurel (RR Retained Core, PRI 71.6) / Ashutosh Sharma (DC Contract, Priority #1)",
+    "regulatory_source": "BCCI IPL 2025/2026 Official Retention Declaration & Player Regulations Clause 4.1",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Franchise retention locks player into MI 2025\u20132027 cycle.",
+      "Theoretical trade cost would require marquee asset exchange incompatible with RR wage structure."
+    ]
   },
   {
     "rank": 2,
@@ -52,12 +59,20 @@
     "ci_upper": 183.4,
     "core_category": "Actionable Target #1 (DC Contract)",
     "availability_status": "ACTIONABLE TARGET",
-    "rr_fit": "⭐ RR Priority #1 (Trade Window / Auction Bid; Solves Gap 1 & 2)",
+    "rr_fit": "\u2b50 RR Priority #1 (Trade Window / Auction Bid; Solves Gap 1 & 2)",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "PURSUE",
+    "decision_rationale": "RR Priority #1 actionable domestic target. Strikes at 180.34-191.28 shrunk SR under high leverage (+27.9% to +31.8% lift). Directly solves Gap 1 (Indian Finisher) and Gap 2 (RHB Middle Order), freeing an overseas slot for bowling reinforcement.",
+    "recruitment_risk": "Potential bidding escalation up to \u20b98.5 Cr in open auction; Delhi Capitals may match aggressively or refuse pre-auction trade.",
+    "suitable_alternative": "Ramandeep Singh (Domestic Power-Finisher) / Nehal Wadhera (Trade Target) / Abdul Samad",
+    "regulatory_source": "IPL Governing Council Capped/Uncapped Auction Registry & DC Roster Disclosure",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Auction price escalates beyond pre-modeled \u20b98.5 Cr ceiling (reallocating purse to death bowling).",
+      "DC demands marquee first-XI player swap in trade negotiations.",
+      "Significant role modification during pre-season placing him outside death-over finish window (overs 16\u201320)."
+    ]
   },
   {
     "rank": 3,
@@ -82,12 +97,20 @@
     "ci_upper": 181.9,
     "core_category": "Actionable Target (Overseas Finisher)",
     "availability_status": "ACTIONABLE TARGET",
-    "rr_fit": "Scenario 5 Target (DC Contract INR 2.0 Cr; est. ₹7.5 Cr if released)",
+    "rr_fit": "Scenario 5 Target (DC Contract INR 2.0 Cr; est. \u20b97.5 Cr if released)",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "MONITOR",
+    "decision_rationale": "Elite international chasing specialist (354-370 pressure balls, 179.73 shrunk SR). Contingency target if domestic acquisitions fail (Scenario 5), requiring release of 2 overseas fringe players.",
+    "recruitment_risk": "Consumes 1 of 8 precious overseas slots (RR currently carries 9 overseas, requiring 1-2 releases for quota compliance); bidding escalation past \u20b97.5 Cr.",
+    "suitable_alternative": "Ashutosh Sharma (Domestic Priority #1) / Tristan Stubbs (DC Retained) / Sikandar Raza",
+    "regulatory_source": "Overseas Player Auction Registration & CSA NOC Verification",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Auction bid exceeds \u20b98.0 Cr reserve valuation.",
+      "RR fails to create overseas roster slot compliance (max 8 overseas allowed by IPL rules).",
+      "Role redundancy if Ashutosh Sharma is successfully secured."
+    ]
   },
   {
     "rank": 4,
@@ -115,9 +138,17 @@
     "rr_fit": "RR Priority #3 (Solves Gap 2 Counter & Gap 4 Depth; reg. pending)",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "PURSUE",
+    "decision_rationale": "Phenomenal 90.9% match success rate (10/11) under pressure. Strikes at 165.80 shrunk SR (+35.4% lift) with defensive off-spin bowling. Perfect tactical counter to opposition left-handers, directly mitigating RR 71.4% LHB top-order exposure.",
+    "recruitment_risk": "Age profile (38y) necessitates short 1-to-2 year contract window; overseas slot competition.",
+    "suitable_alternative": "Glenn Phillips (Overseas Utility RHB) / Dasun Shanaka (Internal RR Reserve)",
+    "regulatory_source": "Zimbabwe Cricket (ZC) Formal NOC Release & IPL 2027 Auction Pool Entry",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Auction price exceeds \u20b94.5 Cr given multi-year horizon constraints.",
+      "Fitness/workload management limitations flagged by sports science staff.",
+      "Inability to register under overseas player cap without releasing high-priority foreign bowler."
+    ]
   },
   {
     "rank": 5,
@@ -145,9 +176,15 @@
     "rr_fit": "Internal Retained Anchor / Crisis Stabilizer (Secured; Zero Outlay)",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "Validated franchise core retention. Model confirms his status as an elite clutch stabilizer (176.93-182.36 shrunk SR, 80.0% match success rate, +34.8 RAAE). Zero auction outlay required.",
+    "recruitment_risk": "Zero recruitment risk (Retained RR contract secured at \u20b914.0 Cr).",
+    "suitable_alternative": "Internal Asset (N/A - Already locked into starting XII)",
+    "regulatory_source": "Rajasthan Royals Official IPL Retention Roster 2025\u20132027",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Retained asset. Player will feature in active Playing XII."
+    ]
   },
   {
     "rank": 6,
@@ -175,9 +212,15 @@
     "rr_fit": "RHB Archetype / Baseline Benchmark",
     "raw_economy": null,
     "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "Contractually locked by Delhi Capitals (Retained at \u20b910.0 Cr). Serves as our analytical archetype for 360-degree RHB middle-order hitting (172.75 shrunk SR, +88.5 RAAE).",
+    "recruitment_risk": "Zero auction availability; Delhi Capitals core retention.",
+    "suitable_alternative": "Ashutosh Sharma (Actionable Priority #1) / Sikandar Raza (Actionable Priority #3)",
+    "regulatory_source": "Delhi Capitals Official Retention List & IPL Governing Council",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Contractually unavailable on open market."
+    ]
   },
   {
     "rank": 7,
@@ -202,12 +245,20 @@
     "ci_upper": 8.88,
     "core_category": "Actionable Target #2 (Domestic Express Pacer)",
     "availability_status": "ACTIONABLE TARGET",
-    "rr_fit": "⭐ RR Priority #2 (Domestic Developmental Pacer, Age 21y 11m, 142.4 kph peak)",
+    "rr_fit": "\u2b50 RR Priority #2 (Domestic Developmental Pacer, Age 21y 11m, 142.4 kph peak)",
     "raw_economy": 7.91,
     "shrunk_press_economy": 8.52,
-    "model_estimated_historical_rsbe": 28.57,
-    "conservative_scenario_planning_rsbe": 14.8,
-    "replacement_adjusted_matchday_rsbe": 23.75
+    "decision_tier": "PURSUE",
+    "decision_rationale": "RR Priority #2 domestic actionable target. Stifling 6.31 raw / 7.39-8.52 shrunk pressure economy with 75.0%-100% match success. Age 21y 11m with documented 142.4 kph yorker execution. Directly solves Gap 3 (Death Pace) while freeing purse and overseas slots.",
+    "recruitment_risk": "Moderate sample size exposure (59-69 pressure balls); raw domestic developmental trajectory requiring technical refinement.",
+    "suitable_alternative": "Mohit Sharma (Veteran Death Specialist, PRI 64.5) / Rasikh Salam / Simarjeet Singh",
+    "regulatory_source": "BCCI Domestic Player Auction Pool 2027 & Bihar Cricket Association Roster",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Auction price escalates beyond \u20b94.0 Cr developmental ceiling (shift immediately to Mohit Sharma).",
+      "Pre-auction medical or biomechanical testing shows velocity reduction below 138 kph.",
+      "Tactical requirement changes to demand >150 balls guaranteed IPL exposure."
+    ]
   },
   {
     "rank": 8,
@@ -233,11 +284,17 @@
     "core_category": "Global Statistical Benchmark",
     "availability_status": "HISTORICAL COMPARATIVE BENCHMARK",
     "rr_fit": "Statistical Benchmark (Diplomatic Conventions Restrict IPL Registration)",
-    "raw_economy": null,
-    "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "raw_economy": 5.1,
+    "shrunk_press_economy": 6.11,
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "Extraordinary defensive spin execution (5.10 raw / 6.11 shrunk economy, +20.5% lift). Retained strictly as an analytical benchmark for middle-overs defensive squeeze; excluded from auction operations due to regulatory restrictions.",
+    "recruitment_risk": "Ineligible for IPL auction registry under prevailing BCCI/PCB diplomatic non-participation policies.",
+    "suitable_alternative": "Fabian Allen (Overseas SLA, PRI 60.1) / Mitchell Santner (CSK/NZ) / Sai Kishore (Domestic SLA)",
+    "regulatory_source": "IPL Governing Council Foreign Player Eligibility Framework",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Diplomatic conventions prevent IPL participation. Benchmark status preserved exclusively for statistical calibration."
+    ]
   },
   {
     "rank": 9,
@@ -263,11 +320,17 @@
     "core_category": "MI Retained Benchmark",
     "availability_status": "RETAINED BENCHMARK",
     "rr_fit": "Global Express Standard / Benchmark",
-    "raw_economy": null,
-    "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "raw_economy": 6.43,
+    "shrunk_press_economy": 6.81,
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "The gold standard in international pace bowling (223 legal balls / 37.1 cricket overs, 6.43 raw / 6.81 shrunk economy). Confirmed retention by Mumbai Indians (\u20b918.0 Cr). Used to set the absolute empirical upper bound of bowling resistance.",
+    "recruitment_risk": "Zero auction availability; MI franchise cornerstone.",
+    "suitable_alternative": "Jofra Archer (RR Retained Core, PRI 55.8) / Sakib Hussain (Developmental Target #2)",
+    "regulatory_source": "Mumbai Indians Retention Submission & IPL Governing Council",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Permanently retained marquee asset."
+    ]
   },
   {
     "rank": 10,
@@ -293,10 +356,16 @@
     "core_category": "Global Statistical Benchmark",
     "availability_status": "HISTORICAL COMPARATIVE BENCHMARK",
     "rr_fit": "Statistical Benchmark (Diplomatic Conventions Restrict IPL Registration)",
-    "raw_economy": null,
-    "shrunk_press_economy": null,
-    "model_estimated_historical_rsbe": null,
-    "conservative_scenario_planning_rsbe": null,
-    "replacement_adjusted_matchday_rsbe": null
+    "raw_economy": 4.74,
+    "shrunk_press_economy": 5.67,
+    "decision_tier": "BENCHMARK ONLY",
+    "decision_rationale": "#1 overall bowler in independent analytical ranking (4.74 raw / 5.67 shrunk economy, +25.0% lift, 11 wickets). Illustrates the power of mystery spin choke under pressure. Excluded from auction shortlist due to diplomatic restrictions.",
+    "recruitment_risk": "Ineligible for IPL auction registry under prevailing BCCI/PCB diplomatic non-participation policies.",
+    "suitable_alternative": "Suyash Sharma (Domestic Mystery Spinner) / Noor Ahmad / Wanindu Hasaranga",
+    "regulatory_source": "IPL Governing Council Foreign Player Eligibility Framework",
+    "verification_date": "November 2026",
+    "walk_away_conditions": [
+      "Non-actionable: Diplomatic conventions prevent IPL participation. Maintained strictly as an analytical benchmark for middle-overs control."
+    ]
   }
 ]
