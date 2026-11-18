@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 const NAV_ITEMS = [
   { path: '/', label: 'Decision Brief', icon: '◆', desc: 'Top 10 Rankings' },
+  { path: '/primer', label: 'Plain English Guide', icon: '★', desc: 'For Coaches & Leaders' },
   { path: '/pressure', label: 'Pressure Intelligence', icon: '⬡', desc: 'P_sit ≥ 0.60 Engine' },
   { path: '/methodology', label: 'Model Trust', icon: '◎', desc: 'Validation & Provenance' },
   { path: '/squad', label: 'Squad Impact', icon: '⬢', desc: 'RR 2027 Scenarios' },
